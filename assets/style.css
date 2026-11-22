@@ -39,10 +39,12 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .skip-link { transition: none; } }
 body { margin: 0; font: 400 1.0625rem/1.6 Barlow, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text); background: var(--paper); overflow-x: hidden; }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 100; padding: .9rem 1.2rem; border-radius: 0 0 var(--radius) var(--radius); background: var(--ink); color: #fff; font-weight: 700; text-decoration: none; transition: top .15s; }
+.skip-link:focus { top: 0; }
 h1, h2, h3 { font-family: var(--head); line-height: 1.05; letter-spacing: .01em; margin: 0 0 .5em; color: var(--ink); }
 h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 700; text-transform: uppercase; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; text-transform: uppercase; }
@@ -207,7 +209,8 @@ section { padding: clamp(4rem, 8vw, 6.5rem) 0; }
 .calc h3 { color: #fff; font-size: 1.35rem; margin-top: .3rem; }
 .calc .muted { color: #9fabbe; font-size: .9rem; }
 .range { margin: 1.4rem 0; }
-.range label { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-weight: 600; color: #d7deea; margin-bottom: .6rem; }
+.range-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: .6rem; }
+.range label { font-weight: 600; color: #d7deea; }
 .range output { font: 700 1.5rem/1 var(--head); color: var(--amber); white-space: nowrap; }
 input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 36px; background: transparent; cursor: pointer; }
 input[type=range]::-webkit-slider-runnable-track { height: 8px; border-radius: 8px; background: var(--ink-3); }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vozopis – životopis vašeho auta | elektronická servisní kniha pro nezávislé autoservisy</title>
-  <meta name="description" content="Zapište servis k VIN za minutu. Zákazník dostane historii auta s QR kódem a při prodeji ji může ukázat kupujícímu. Vozopis – životopis vašeho auta. Elektronická servisní kniha pro nezávislé autoservisy.">
+  <title>Elektronická servisní kniha pro autoservisy – Vozopis</title>
+  <meta name="description" content="Elektronická servisní kniha pro nezávislé autoservisy. Zapište servis k VIN za minutu, zákazník dostane historii auta s QR kódem. 69 Kč za zápis, první měsíc zdarma.">
   <meta name="theme-color" content="#17191c">
   <meta name="tdm-reservation" content="1">
   <meta name="robots" content="noai, noimageai">
@@ -19,13 +19,116 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Vozopis – servisní historie, které kupující uvěří">
   <meta property="og:site_name" content="Vozopis">
+  <link rel="canonical" href="https://vozopis.cz/">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Elektronická servisní kniha pro autoservisy – Vozopis">
+  <meta name="twitter:description" content="Zapište servis k VIN za minutu. Zákazník dostane historii auta s QR kódem a při prodeji ji může ukázat kupujícímu.">
+  <meta name="twitter:image" content="https://vozopis.cz/assets/og.png?v=2">
+  <meta name="twitter:image:alt" content="Vozopis – servisní historie, které kupující uvěří">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/barlow-condensed-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/barlow-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://vozopis.cz/#organizace",
+        "name": "Vozopis",
+        "url": "https://vozopis.cz/",
+        "email": "romanzdk@gmail.com",
+        "description": "Elektronická servisní kniha pro nezávislé autoservisy v Česku.",
+        "areaServed": { "@type": "Country", "name": "Česko" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "zákaznická podpora",
+          "email": "romanzdk@gmail.com",
+          "availableLanguage": ["cs"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vozopis.cz/#web",
+        "url": "https://vozopis.cz/",
+        "name": "Vozopis",
+        "inLanguage": "cs",
+        "publisher": { "@id": "https://vozopis.cz/#organizace" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://vozopis.cz/#sluzba",
+        "name": "Elektronická servisní kniha Vozopis",
+        "serviceType": "Elektronická servisní kniha",
+        "description": "Elektronická servisní kniha pro nezávislé autoservisy. Servis zapíše návštěvu auta k VIN, majitel dostane historii s QR kódem a při prodeji ji ukáže kupujícímu.",
+        "provider": { "@id": "https://vozopis.cz/#organizace" },
+        "areaServed": { "@type": "Country", "name": "Česko" },
+        "audience": [
+          { "@type": "BusinessAudience", "name": "nezávislé autoservisy" },
+          { "@type": "PeopleAudience", "name": "majitelé aut" }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://vozopis.cz/#cenik",
+          "price": "69",
+          "priceCurrency": "CZK",
+          "description": "Cena za jeden zápis do servisní knihy. Bez paušálu, první měsíc zdarma."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://vozopis.cz/#otazky",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Nahrazuje Vozopis servisní knížku od výrobce?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ne, doplňuje ji. Hodí se hlavně pro auta, která jezdí do nezávislých servisů. Do značkové elektronické knížky nezávislý servis většinou zapisovat nemůže, do Vozopisu ano. U servisu mimo značku tak značková knížka často zápisy nemá, Vozopis drží historii napříč servisy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Musím si jako majitel zakládat účet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ne. Historii otevřete QR kódem z karty, nebo zadáte VIN a přístupový kód. Žádné heslo, žádná aplikace."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Co uvidí cizí člověk, když zná VIN?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nic. Souhrn (počet záznamů, typy prací, průběh kilometrů) ukážeme jen u aut, jejichž majitel ověření sám zapnul (třeba když auto prodává), a jen tomu, kdo zadá i datum první registrace z techničáku. Jména, telefony, SPZ ani ceny neuvidí nikdo cizí. Kupující, kterému majitel pošle odkaz, vidí servisy a kilometry, ceny ne. Majitel může ověření kdykoli zase vypnout."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Je stav kilometrů ve Vozopisu důkaz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ne. Údaje zapisují servisy a Vozopis je neověřuje. Když hodnoty nenavazují, může jít o chybu při zápisu, výměnu přístroje i zásah do tachometru. Berte to jako důvod se zeptat, ne jako rozsudek."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kolik stojí Vozopis pro servis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "69 Kč za každý zápis. Zápis je jedna návštěva auta v servisu, i když se dělalo víc věcí: výměna oleje, filtrů a brzd při jedné návštěvě je jeden zápis. Když stejné auto přijede v měsíci dvakrát, jsou to dva zápisy. Žádný paušál, tarif ani minimum: když měsíc nic nezapíšete, nic neplatíte. Nejsme plátci DPH, cena je konečná. První měsíc máte Vozopis zdarma, takže si ho v dílně vyzkoušíte bez rizika."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+<a class="skip-link" href="#top">Přeskočit na obsah</a>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -69,7 +172,7 @@
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
@@ -84,7 +187,7 @@
         <a class="btn btn-ghost needs-dir" href="#najit-servis" hidden><svg aria-hidden="true"><use href="#i-search"/></svg>Seznam servisů</a>
       </div>
       <p class="hero-owner"><b>Máte auto?</b> Ukažte kupujícímu, kdy se měnil olej nebo brzdy. <a href="#majitele">Jak na to&nbsp;→</a></p>
-      <ul class="checks">
+      <ul class="checks" role="list">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zapisují jen servisy s ověřeným IČO</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Záznam nejde smazat</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Majitel nepotřebuje účet</li>
@@ -172,7 +275,7 @@
       Majitel dostane historii auta s&nbsp;QR kódem → při prodeji ji může ukázat kupujícímu.
     </div>
 
-    <ol class="steps">
+    <ol class="steps" role="list">
       <li><h3>Opravíte auto</h3><p>Jako vždycky. Nic se pro vás v&nbsp;dílně nemění.</p></li>
       <li><h3>Zapíšete do Vozopisu</h3><p>Datum, kilometry, co se dělalo. Minuta na telefonu, tabletu nebo počítači.</p></li>
       <li><h3>Vyúčtujete dohodnutou cenu</h3><p>Má-li zákazník za zápis platit zvlášť, dohodněte s&nbsp;ním cenu předem.</p></li>
@@ -188,7 +291,7 @@
         <p class="eyebrow">Pro servisy</p>
         <h2 id="ws-title">Kolik stojí zápisy pro váš servis</h2>
         <p class="lead">Za zápis do Vozopisu si účtujete jako za každou jinou práci. Zákazník ví, za co platí: jeho auto bude mít historii, kterou při prodeji ukáže.</p>
-        <ul class="ticks">
+        <ul class="ticks" role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Žádný program ani instalace</b><span>Běží v&nbsp;prohlížeči. Stačí telefon, tablet nebo starý počítač v&nbsp;dílně.</span></div></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Zákazník se vrátí k&nbsp;vám</b><span>Vozopis hlídá, komu se blíží další servis. Stačí zavolat.</span></div></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odlišíte se od konkurence</b><span>Elektronickou knížku dnes nabízejí hlavně značkové servisy. Teď ji máte i vy.</span></div></li>
@@ -198,11 +301,17 @@
         <p class="muted">Spočítejte si to</p>
         <h3 id="calc-title">Tržby a poplatek za zápisy</h3>
         <div class="range">
-          <label for="price">Cena za jeden zápis <output id="price-out" for="price">300 Kč</output></label>
+          <div class="range-head">
+            <label for="price">Cena za jeden zápis</label>
+            <output id="price-out" for="price">300 Kč</output>
+          </div>
           <input id="price" type="range" min="100" max="1000" step="10" value="300">
         </div>
         <div class="range">
-          <label for="count">Zápisů za měsíc <output id="count-out" for="count">50</output></label>
+          <div class="range-head">
+            <label for="count">Zápisů za měsíc</label>
+            <output id="count-out" for="count">50</output>
+          </div>
           <input id="count" type="range" min="5" max="300" step="5" value="50">
         </div>
         <div class="result" aria-live="polite">
@@ -232,7 +341,7 @@
       <p class="eyebrow">Pro majitele aut</p>
       <h2 id="own-title">Historie auta při prodeji</h2>
       <p class="lead">Kupujícímu ukážete, které práce zapojené servisy zapsaly a kolik mělo auto při návštěvě najeto. Opravy provedené bez zápisu ve výpisu chybějí.</p>
-      <ul class="ticks">
+      <ul class="ticks" role="list">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Jedna historie pro všechny servisy</b><span>Olej u&nbsp;jednoho, pneu u&nbsp;druhého. Všechno je pohromadě podle VIN, i&nbsp;když jezdíte mimo značkový servis.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Bez registrace a bez aplikace</b><span>Naskenujete QR kód z&nbsp;karty, nebo zadáte VIN a kód. Hotovo.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odkaz a prodejní karta pro kupujícího</b><span>Při prodeji pošlete odkaz nebo dejte za okno kartu s&nbsp;QR kódem. Kupující uvidí každý servis a kilometry.</span></div></li>
@@ -355,7 +464,7 @@
           <div><dt>50 zápisů</dt><dd>3&nbsp;450 Kč za měsíc</dd></div>
           <div><dt>150 zápisů</dt><dd>10&nbsp;350 Kč za měsíc</dd></div>
         </dl>
-        <ul>
+        <ul role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zápisy servisu k VIN</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Účty pro všechny mechaniky</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Připomínky dalšího servisu</li>
@@ -369,7 +478,7 @@
         <h3>Zápis v&nbsp;servisu</h3>
         <p class="amount">Podle servisu</p>
         <p class="per">Cenu zápisu vám servis sdělí předem. Může být součástí ceny opravy.</p>
-        <ul>
+        <ul role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Prohlížení historie zdarma</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tisk a PDF zdarma</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Odkaz pro kupujícího zdarma</li>
@@ -381,7 +490,7 @@
         <h3>Ověření u&nbsp;auta</h3>
         <p class="amount">Zdarma</p>
         <p class="per">Bez registrace. Stačí odkaz od prodávajícího.</p>
-        <ul>
+        <ul role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Počet záznamů a servisů</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Průběh kilometrů</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Upozornění, když km nenavazují</li>
@@ -399,13 +508,16 @@
       <h2 id="faq-title">Na co se ptají servisy i majitelé</h2>
     </div>
     <div class="faq">
+      <details><summary>Pro koho je Vozopis určený?</summary><p>Pro tři skupiny. Nezávislé autoservisy ho používají jako další placenou službu a přehled zákazníků, kterým se blíží servis. Majitelé aut díky němu doloží, co se na autě dělalo, a při prodeji to mohou ukázat kupujícímu. Kupující ojetin u&nbsp;auta zdarma uvidí, co se na něm dělalo a jak rostly kilometry.</p></details>
       <details><summary>Nahrazuje Vozopis servisní knížku od výrobce?</summary><p>Ne, doplňuje ji. Hodí se hlavně pro auta, která jezdí do nezávislých servisů. Do značkové elektronické knížky nezávislý servis většinou zapisovat nemůže, do Vozopisu ano. U&nbsp;servisu mimo značku tak značková knížka často zápisy nemá, Vozopis drží historii napříč servisy.</p></details>
       <details><summary>Co když jezdím do více servisů?</summary><p>Nevadí. Všechny servisy zapisují do stejné historie podle VIN. Vy vidíte všechno pohromadě.</p></details>
+      <details><summary>Jak zjistím servisní historii auta podle VIN?</summary><p>Historie je uložená u&nbsp;VIN. Majitel ji otevře QR kódem z&nbsp;karty, nebo zadá VIN a přístupový kód. Kupujícímu ji ukáže odkazem pro kupující nebo kartou za oknem. Když zadáte jen VIN bez souhlasu majitele, historii neuvidíte: souhrn se zobrazí jen u&nbsp;aut, kde majitel ověření zapnul, a&nbsp;jen s&nbsp;datem první registrace z&nbsp;techničáku.</p></details>
       <details><summary>Musím si jako majitel zakládat účet?</summary><p>Ne. Historii otevřete QR kódem z&nbsp;karty, nebo zadáte VIN a přístupový kód. Žádné heslo, žádná aplikace.</p></details>
       <details><summary>Co když servis zapíše chybu?</summary><p>Servis záznam zruší, napíše důvod a zapíše ho znovu správně. Původní záznam zůstane vidět přeškrtnutý, takže nikdo nemůže historii potichu upravit.</p></details>
       <details><summary>Prodávám auto. Co s&nbsp;historií?</summary><p>Pošlete kupujícímu odkaz pro kupující, nebo si vytiskněte prodejní kartu s&nbsp;QR kódem a textem do inzerátu. Po prodeji nechte v&nbsp;servisu vytvořit nový kód. Staré odkazy přestanou platit a nový majitel pokračuje ve stejné historii.</p></details>
       <details><summary>Co uvidí cizí člověk, když zná VIN?</summary><p>Nic. Souhrn (počet záznamů, typy prací, průběh kilometrů) ukážeme jen u&nbsp;aut, jejichž majitel ověření sám zapnul (třeba když auto prodává), a jen tomu, kdo zadá i datum první registrace z&nbsp;techničáku. Jména, telefony, SPZ ani ceny neuvidí nikdo cizí. Kupující, kterému majitel pošle odkaz, vidí servisy a kilometry, ceny ne. Majitel může ověření kdykoli zase vypnout.</p></details>
       <details><summary>Je stav kilometrů ve Vozopisu důkaz?</summary><p>Ne. Údaje zapisují servisy a Vozopis je neověřuje. Když hodnoty nenavazují, může jít o&nbsp;chybu při zápisu, výměnu přístroje i zásah do tachometru. Berte to jako důvod se zeptat, ne jako rozsudek.</p></details>
+      <details><summary>Jak ověřím kilometry ojetého auta?</summary><p>Vozopis ukáže průběh kilometrů ze všech zápisů. Když je některý stav nižší než předchozí, nebo skokově nesedí, záznam se označí a&nbsp;je u&nbsp;něj vidět servis, který ho zapsal. Berte to jako důvod se zeptat prodejce. Údaje zapisují servisy a&nbsp;Vozopis je neověřuje, takže to není potvrzení, že je tachometr stočený.</p></details>
       <details><summary>Chci opravit nebo smazat své údaje. Jak?</summary><p>Napište servisu, který záznam zapsal, nebo nám. Chybný záznam servis zruší a zapíše správně. Jméno, telefon a přílohy smaže na požádání. Samotný záznam o&nbsp;servisu (datum, km, práce) zůstává, aby historie auta byla úplná.</p></details>
       <details><summary>Potřebuje servis nějaký program nebo nový počítač?</summary><p>Ne. Vozopis běží v&nbsp;prohlížeči na telefonu, tabletu i počítači. Nic se neinstaluje a nic se neaktualizuje.</p></details>
       <details><summary>Kolik stojí Vozopis pro servis?</summary><p>69&nbsp;Kč za každý zápis. Zápis je jedna návštěva auta v&nbsp;servisu, i když se dělalo víc věcí: výměna oleje, filtrů a brzd při jedné návštěvě je jeden zápis. Když stejné auto přijede v&nbsp;měsíci dvakrát, jsou to dva zápisy. Žádný paušál, tarif ani minimum: když měsíc nic nezapíšete, nic neplatíte. Nejsme plátci DPH, cena je konečná. První měsíc máte Vozopis zdarma, takže si ho v&nbsp;dílně vyzkoušíte bez rizika.</p></details>
