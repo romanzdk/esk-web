@@ -26,7 +26,7 @@
 <ul>
   <li>Nepoužívá cookies, měření návštěvnosti ani reklamu. Písma načítá z&nbsp;vlastního serveru, ne od Googlu.</li>
   <li>Web běží na službě GitHub Pages (GitHub, Inc.). Ta při každé návštěvě zpracovává vaši IP adresu kvůli provozu a bezpečnosti, podle <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">zásad GitHubu</a>.</li>
-  <li>Seznam autoservisů zobrazuje údaje firem, které se do Vozopisu zapojily: název, adresu, případný telefon a rok zapojení. Aplikace je zveřejňuje i jako veřejná data (JSON) včetně obce, PSČ a kraje. Servis se ze seznamu může kdykoli sám odebrat.</li>
+  <li>Seznam autoservisů zobrazuje jen servisy, které o to samy požádaly: název, obec, PSČ, kraj, případný telefon a rok zapojení, ulici a číslo jen na přání servisu. Aplikace je zveřejňuje i jako veřejná data (JSON). Servis svou volbu může kdykoli změnit.</li>
   <li>Když nám napíšete e-mail, použijeme vaši adresu a zprávu jen k&nbsp;odpovědi a k&nbsp;případné domluvě o&nbsp;spolupráci. Smažeme je, až nebudou potřeba.</li>
 </ul>
 
@@ -37,7 +37,7 @@
   <li>servisní záznamy: datum, stav tachometru, provedené práce, cena, příští servis, odložené práce, stav baterie u&nbsp;elektroaut a hybridů,</li>
   <li>kontakt na zákazníka (jméno, telefon, e-mail) a přílohy – jen pokud je servis zadá,</li>
   <li>záznamy o přístupu včetně IP adres – záznamy starší než 365 dní průběžně mažeme,</li>
-  <li>zprávy z formuláře Napište nám: jméno, kontakt a text, odkud byly odeslány (název stránky), u přihlášených i účet a servis – zprávu ukládáme a její obsah posíláme provozovateli e-mailem kvůli odpovědi a zlepšení služby; smažeme je, až nebudou potřeba.</li>
+  <li>zprávy z formuláře Napište nám: jméno, kontakt a text, odkud byly odeslány (název stránky), u přihlášených i účet a servis – zprávu ukládáme kvůli odpovědi a zlepšení služby, provozovatel dostane e-mailem jen upozornění bez obsahu; zprávu smažeme 12 měsíců po vyřízení.</li>
 </ul>
 <p>Technické údaje o vozidle (značka, model, datum první registrace, palivo, motor, platnost STK) může servis načíst podle VIN z&nbsp;veřejného rozhraní Registru silničních vozidel Ministerstva dopravy. Údaje o majitelích registr neposkytuje.</p>
 <p>Účelem je důvěryhodná servisní historie vozidla a ochrana kupujících ojetin před stočeným tachometrem. Právním základem je oprávněný zájem (čl. 6 odst. 1 písm. f GDPR). Historii spravujeme společně s&nbsp;autoservisy, kontakty na zákazníky patří servisu, který je zapsal.</p>
@@ -45,7 +45,7 @@
 <ul>
   <li><b>Majitel</b> (přístupový kód nebo QR kód): celou historii včetně cen a příloh, bez samostatných kontaktních polí. Příloha může obsahovat údaje z&nbsp;původní faktury.</li>
   <li><b>Kupující</b> (VIN a datum první registrace z&nbsp;techničáku): počet záznamů, druhy prací, průběh kilometrů a který servis je zapsal. U&nbsp;vozidla bez uloženého data první registrace se souhrn ověřuje podle VIN a stavu tachometru. Majitel může tento pohled vypnout.</li>
-  <li><b>Kupující s&nbsp;odkazem od majitele</b> (odkaz pro kupující nebo QR z&nbsp;prodejní karty): všechny záznamy, práce, kilometry a stav baterie, bez cen, faktur, poznámek a kontaktů.</li>
+  <li><b>Kupující s&nbsp;odkazem od majitele</b> (odkaz pro kupující nebo QR z&nbsp;prodejní karty): všechny záznamy, práce, kilometry a stav baterie, bez cen, faktur, poznámek a kontaktů. Odkaz platí, dokud ho majitel nevymění za nový nebo dokud servis při prodeji auta nevytvoří nový přístupový kód.</li>
   <li><b>Autoservisy</b>: technickou historii vozidla. Ceny, přílohy a kontakty jen u&nbsp;záznamů, které samy zapsaly.</li>
 </ul>
 <p>Údaje zapisují autoservisy, provozovatel je neověřuje. Historie je vodítko, ne úřední doklad. Servisní záznamy se nemažou, chybné se zruší a zůstanou přeškrtnuté. Kontakty na zákazníky a přílohy servis na požádání smaže.</p>
