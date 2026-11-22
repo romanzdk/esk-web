@@ -23,3 +23,7 @@ Sekce „Najít servis“ načítá `assets/autoservisy.json` (teď prázdný se
 
 `podminky.html` je vygenerovaná kopie návrhů z repa aplikace (`docs/pravni/*.md`, bez poznámek pro advokáta). Po změně podmínek ji vygenerujte znovu stejným postupem (Markdown → HTML) a commitněte. `ochrana-udaju.html` se píše ručně a má odpovídat stránce Ochrana osobních údajů v aplikaci.
 
+## Kontaktní formulář
+
+Formulář v sekci Kontakt odesílá zprávy do aplikace ESK (`/api/kontakt/`, zprávy uvidíte v administraci). Dokud aplikace neběží veřejně, je skrytý a zobrazuje se tlačítko „Napsat e-mail“. Po nasazení nastavte v `index.html` u `<form id="contact-form">` atribut `data-endpoint="https://<adresa aplikace>/api/kontakt/"`.
+

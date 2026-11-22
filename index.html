@@ -415,7 +415,19 @@
         <h2 id="cta-title">Chcete ESK ve svém servisu?</h2>
         <p>První 2 měsíce máte ESK zdarma. Napište nám a ukážeme vám, jak to funguje. Zabere to 15 minut.</p>
       </div>
-      <a class="btn btn-primary" href="mailto:esk@example.com?subject=Chci%20ESK%20do%20servisu"><svg aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
+      <a id="contact-mail" class="btn btn-primary" href="mailto:romanzdk@gmail.com?subject=Chci%20ESK%20do%20servisu"><svg aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
+      <!-- Shown once data-endpoint points to the ESK app: https://<adresa aplikace>/api/kontakt/ -->
+      <form id="contact-form" class="contact-form" data-endpoint="" hidden>
+        <input type="hidden" name="kind" value="dotaz"><input type="hidden" name="page" value="promo web">
+        <div class="hp" aria-hidden="true"><label>Web <input name="web" tabindex="-1" autocomplete="off"></label></div>
+        <label>Jméno<input name="name" autocomplete="name"></label>
+        <label>E-mail nebo telefon *<input name="contact" required autocomplete="email"></label>
+        <label>Autoservis<input name="workshop_name" autocomplete="organization"></label>
+        <label>Zpráva *<textarea name="text" rows="3" required placeholder="Chci ESK vyzkoušet. Ozvěte se mi, prosím."></textarea></label>
+        <button class="btn btn-primary">Odeslat</button>
+        <p class="form-note">Údaje použijeme jen k&nbsp;odpovědi. <a href="ochrana-udaju.html">Ochrana osobních údajů</a></p>
+        <p id="contact-status" class="form-note" role="status"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -490,6 +502,20 @@
     if (all.length) document.querySelectorAll(".needs-dir").forEach(e => { e.hidden = false; });
     document.getElementById("dir-q").addEventListener("input", () => renderDirectory(all));
     renderDirectory(all);
+  });
+  const cf = document.getElementById("contact-form");
+  if (cf.dataset.endpoint) { cf.hidden = false; document.getElementById("contact-mail").hidden = true; }
+  cf.addEventListener("submit", async e => {
+    e.preventDefault();
+    const status = document.getElementById("contact-status"), btn = cf.querySelector("button");
+    btn.disabled = true; status.textContent = "Odesílám…";
+    try {
+      const r = await fetch(cf.dataset.endpoint, { method: "POST", body: new FormData(cf) });
+      if (r.ok) { cf.reset(); status.textContent = "Díky! Zprávu jsme dostali a brzy se vám ozveme."; }
+      else status.textContent = r.status === 429 ? "Příliš mnoho zpráv za hodinu. Zkuste to později." : "Zkontrolujte kontakt a zprávu.";
+    } catch {
+      status.textContent = "Zprávu se nepodařilo odeslat. Napište nám prosím na romanzdk@gmail.com.";
+    } finally { btn.disabled = false; }
   });
 </script>
 </body>
