@@ -282,10 +282,18 @@ input[type=range]::-moz-range-thumb { width: 26px; height: 26px; border-radius: 
 .price li { display: flex; gap: .6rem; align-items: flex-start; font-size: 1rem; }
 .price li svg { width: 20px; height: 20px; color: var(--ok); flex: none; margin-top: .2rem; }
 .price .btn { margin-top: auto; }
+.tiers { margin: 0 0 1.3rem; border: 1px solid var(--line); border-radius: var(--radius); }
+.tiers div { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem .8rem; }
+.tiers div + div { border-top: 1px solid var(--line); }
+.tiers dt { font: 700 1rem/1.3 var(--head); color: var(--ink); }
+.tiers dd { margin: 0; color: var(--muted); font-size: .95rem; text-align: right; }
 .price.main { background: var(--ink); color: #dfe5ee; border: 0; box-shadow: var(--shadow-lg); position: relative; }
 .price.main h3, .price.main .amount { color: #fff; }
 .price.main .who, .price.main .per { color: #9fabbe; }
 .price.main li svg { color: var(--amber); }
+.price.main .tiers, .price.main .tiers div + div { border-color: rgba(255,255,255,.16); }
+.price.main .tiers dt { color: #fff; }
+.price.main .tiers dd { color: #c3ccd8; }
 .price.main .tag { position: absolute; top: -13px; left: 1.7rem; background: var(--amber-dark); color: #fff; font: 700 .85rem/1 var(--head); letter-spacing: .06em; text-transform: uppercase; padding: .45rem .7rem; border-radius: 6px; }
 @media (max-width: 940px) { .prices { grid-template-columns: 1fr; max-width: 520px; margin-inline: auto; } }
 
