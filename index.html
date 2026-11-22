@@ -27,6 +27,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#top">Přeskočit na obsah</a>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
@@ -69,7 +71,7 @@
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
@@ -84,7 +86,7 @@
         <a class="btn btn-ghost needs-dir" href="#najit-servis" hidden><svg aria-hidden="true"><use href="#i-search"/></svg>Seznam servisů</a>
       </div>
       <p class="hero-owner"><b>Máte auto?</b> Prodejte ho dráž. S&nbsp;doloženou historií od servisů kupující méně smlouvá. <a href="#majitele">Jak na to&nbsp;→</a></p>
-      <ul class="checks">
+      <ul class="checks" role="list">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zapisují jen servisy s ověřeným IČO</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Záznam nejde smazat</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Majitel nepotřebuje účet</li>
@@ -172,7 +174,7 @@
       Majitel dostane historii auta s&nbsp;QR kódem → při prodeji ji ukáže kupujícímu → auto prodá rychleji a za víc.
     </div>
 
-    <ol class="steps">
+    <ol class="steps" role="list">
       <li><h3>Opravíte auto</h3><p>Jako vždycky. Nic se pro vás v&nbsp;dílně nemění.</p></li>
       <li><h3>Zapíšete do Vozopisu</h3><p>Datum, kilometry, co se dělalo. Minuta na telefonu, tabletu nebo počítači.</p></li>
       <li><h3>Zákazník zaplatí zápis</h3><p>Jako každou jinou položku na faktuře. Kolik si řeknete, je na vás.</p></li>
@@ -188,7 +190,7 @@
         <p class="eyebrow">Pro servisy</p>
         <h2 id="ws-title">Vozopis se zaplatí ze zápisů</h2>
         <p class="lead">Za zápis do Vozopisu si účtujete jako za každou jinou práci. Zákazník ví, za co platí: jeho auto bude mít historii, kterou při prodeji ukáže.</p>
-        <ul class="ticks">
+        <ul class="ticks" role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Žádný program ani instalace</b><span>Běží v&nbsp;prohlížeči. Stačí telefon, tablet nebo starý počítač v&nbsp;dílně.</span></div></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Zákazník se vrátí k&nbsp;vám</b><span>Vozopis hlídá, komu se blíží další servis. Stačí zavolat.</span></div></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odlišíte se od konkurence</b><span>Elektronickou knížku dnes nabízejí hlavně značkové servisy. Teď ji máte i vy.</span></div></li>
@@ -232,7 +234,7 @@
       <p class="eyebrow">Pro majitele aut</p>
       <h2 id="own-title">Auto, které se lépe prodá</h2>
       <p class="lead">Kupující ojetiny bez historie smlouvá. S&nbsp;Vozopisem mu ukážete každý servis a kilometry – od servisů s&nbsp;ověřeným IČO, nic nejde dodatečně změnit. Papírová knížka se ztratí a razítko se dá zfalšovat, Vozopis ne.</p>
-      <ul class="ticks">
+      <ul class="ticks" role="list">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Jedna historie pro všechny servisy</b><span>Olej u&nbsp;jednoho, pneu u&nbsp;druhého. Všechno je pohromadě podle VIN, i&nbsp;když jezdíte mimo značkový servis.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Bez registrace a bez aplikace</b><span>Naskenujete QR kód z&nbsp;karty, nebo zadáte VIN a kód. Hotovo.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odkaz a prodejní karta pro kupujícího</b><span>Při prodeji pošlete odkaz nebo dejte za okno kartu s&nbsp;QR kódem. Kupující uvidí každý servis a kilometry.</span></div></li>
@@ -355,7 +357,7 @@
           <div><dt>50 zápisů</dt><dd>3&nbsp;450 Kč za měsíc</dd></div>
           <div><dt>150 zápisů</dt><dd>10&nbsp;350 Kč za měsíc</dd></div>
         </dl>
-        <ul>
+        <ul role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zápisy servisu k VIN</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Účty pro všechny mechaniky</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Připomínky dalšího servisu</li>
@@ -369,7 +371,7 @@
         <h3>Zápis v&nbsp;servisu</h3>
         <p class="amount">Podle servisu</p>
         <p class="per">Platíte jen za zápis, jako položku na faktuře.</p>
-        <ul>
+        <ul role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Prohlížení historie zdarma</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tisk a PDF zdarma</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Odkaz pro kupujícího zdarma</li>
@@ -381,7 +383,7 @@
         <h3>Ověření u&nbsp;auta</h3>
         <p class="amount">Zdarma</p>
         <p class="per">Bez registrace. Stačí odkaz od prodávajícího.</p>
-        <ul>
+        <ul role="list">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Počet záznamů a servisů</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Průběh kilometrů</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Upozornění, když km nenavazují</li>

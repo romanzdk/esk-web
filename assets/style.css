@@ -39,10 +39,12 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .skip-link { transition: none; } }
 body { margin: 0; font: 400 1.0625rem/1.6 Barlow, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text); background: var(--paper); overflow-x: hidden; }
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 100; padding: .9rem 1.2rem; border-radius: 0 0 var(--radius) var(--radius); background: var(--ink); color: #fff; font-weight: 700; text-decoration: none; transition: top .15s; }
+.skip-link:focus { top: 0; }
 h1, h2, h3 { font-family: var(--head); line-height: 1.05; letter-spacing: .01em; margin: 0 0 .5em; color: var(--ink); }
 h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 700; text-transform: uppercase; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; text-transform: uppercase; }
