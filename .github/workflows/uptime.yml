@@ -1,0 +1,23 @@
+# Availability check of the Vozopis sites. It lives in this public repo because Actions minutes are free here.
+# A failed run makes GitHub e-mail the repo owner. GitHub disables schedules after 60 days without a commit.
+name: uptime
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Sites respond
+        run: |
+          fail=0
+          for url in https://vozopis.cz/ https://app.vozopis.cz/healthz https://demo.vozopis.cz/healthz; do
+            if curl -fsS -o /dev/null --max-time 20 --retry 3 --retry-delay 20 --retry-all-errors "$url"; then
+              echo "ok   $url"
+            else
+              echo "FAIL $url"; fail=1
+            fi
+          done
+          exit $fail
