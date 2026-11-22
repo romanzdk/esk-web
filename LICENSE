@@ -1,0 +1,62 @@
+Copyright © 2026 autor repozitáře (https://github.com/romanzdk). Všechna práva vyhrazena.
+Copyright © 2026 the repository owner (https://github.com/romanzdk). All rights reserved.
+
+ČESKY
+
+Tento repozitář je veřejný jen proto, aby mohl běžet na GitHub Pages. Jeho zveřejněním
+se neuděluje žádná licence ani jiné oprávnění.
+
+Bez předchozího písemného souhlasu autora je zakázáno:
+  1. kopírovat, upravovat, šířit, znovu zveřejňovat, prodávat, pronajímat nebo
+     sublicencovat kód, texty, grafiku, design, značku a název „ESK – Elektronická
+     servisní kniha“ ani jejich části;
+  2. vytvářet z nich odvozená díla nebo je používat ve vlastních projektech, webech
+     či produktech;
+  3. používat je k vytěžování textů a dat (text and data mining) a k trénování,
+     ladění nebo vyhodnocování modelů umělé inteligence.
+
+Autor si výslovně vyhrazuje práva podle § 39c zákona č. 121/2000 Sb., autorský zákon,
+a čl. 4 odst. 3 směrnice (EU) 2019/790. Strojově čitelná výhrada je uvedena ve stránce
+(meta „tdm-reservation“).
+
+Výjimka: práva, která GitHub poskytuje uživatelům svými podmínkami užití (prohlížet
+veřejný repozitář a vytvořit si jeho fork v rámci GitHubu), tato licence omezit nemůže.
+Ani tato práva ale neopravňují obsah používat mimo GitHub nebo ho dál šířit.
+
+ENGLISH
+
+This repository is public only so that it can be served by GitHub Pages. Publishing it
+grants no licence or other permission.
+
+Without the author's prior written consent you may not:
+  1. copy, modify, distribute, republish, sell, rent or sublicense the code, texts,
+     graphics, design, brand or the name "ESK – Elektronická servisní kniha", in whole
+     or in part;
+  2. create derivative works or use them in your own projects, websites or products;
+  3. use them for text and data mining or to train, fine-tune or evaluate artificial
+     intelligence models.
+
+The author expressly reserves these rights under Article 4(3) of Directive (EU) 2019/790.
+
+Exception: rights GitHub grants its users in its Terms of Service (viewing a public
+repository and forking it within GitHub) cannot be limited by this notice. They do not
+permit use of the content outside GitHub or any further distribution.
+
+TŘETÍ STRANY / THIRD-PARTY COMPONENTS (mají vlastní licence / own licences)
+
+- Písmo Barlow a Barlow Condensed (assets/fonts/): SIL Open Font License 1.1,
+  viz assets/fonts/OFL.txt.
+- Ikona klíče (symbol "i-wrench" v index.html) pochází z Lucide, licence ISC:
+
+  ISC License
+  Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as part of
+  Feather (MIT). All other copyright (c) for Lucide are held by Lucide Contributors 2022.
+  Permission to use, copy, modify, and/or distribute this software for any purpose with
+  or without fee is hereby granted, provided that the above copyright notice and this
+  permission notice appear in all copies.
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO
+  THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO
+  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+  DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER
+  IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+  CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.

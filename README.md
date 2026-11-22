@@ -4,9 +4,13 @@ Prezentační web služby **Elektronická servisní kniha (ESK)**. Jedna statick
 
 - `index.html` – celý obsah stránky
 - `assets/style.css` – vzhled
-- `assets/fonts/` – Inter a Archivo hostované lokálně, takže se nic nenačítá od Googlu a web nepotřebuje cookie lištu
+- `assets/fonts/` – Barlow a Barlow Condensed (stejné jako v aplikaci) hostované lokálně, takže se nic nenačítá od Googlu a web nepotřebuje cookie lištu
 - `assets/og.png` – náhled pro sdílení na sociálních sítích
 
 Lokálně: otevřete `index.html` v prohlížeči.
 
 Před spuštěním doplňte skutečný kontaktní e-mail místo `esk@example.com` v `index.html`.
+
+## Licence
+
+Všechna práva vyhrazena, žádné další použití bez písemného souhlasu. Podrobnosti v [LICENSE](LICENSE). Repozitář je veřejný jen kvůli GitHub Pages.

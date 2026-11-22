@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ESK – Elektronická servisní kniha pro nezávislé autoservisy</title>
   <meta name="description" content="Zapište servis k VIN za minutu. Zákazník dostane historii auta s QR kódem a při prodeji za auto dostane víc. Elektronická servisní kniha pro nezávislé autoservisy.">
-  <meta name="theme-color" content="#0f1b2d">
+  <meta name="theme-color" content="#17191c">
+  <meta name="tdm-reservation" content="1">
+  <meta name="robots" content="noai, noimageai">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:title" content="ESK – Elektronická servisní kniha">
@@ -14,8 +16,8 @@
   <meta property="og:image" content="https://romanzdk.github.io/esk-web/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-condensed-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/barlow-latin-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -42,15 +44,13 @@
     <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5L2.5 20h19z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="logo" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#f5b400"/><path d="M11 10h14.5a3.5 3.5 0 0 1 3.5 3.5V30H14.5A3.5 3.5 0 0 1 11 26.5z" fill="none" stroke="#0f1b2d" stroke-width="2.8" stroke-linejoin="round"/><path d="M11 26.5A3.5 3.5 0 0 1 14.5 23H29" fill="none" stroke="#0f1b2d" stroke-width="2.8"/><path d="M15.5 15.6l2.6 2.6 5-5" fill="none" stroke="#0f1b2d" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
 
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="ESK – Elektronická servisní kniha, na začátek stránky">
-      <svg aria-hidden="true"><use href="#logo"/></svg>
-      <span><b>ESK</b><small>Elektronická servisní kniha</small></span>
+      <span class="brand-mark">ESK</span><span class="brand-name">Elektronická servisní kniha</span>
     </a>
     <nav class="nav" aria-label="Hlavní menu">
       <a href="#servisy">Pro servisy</a>
@@ -79,13 +79,14 @@
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zapisují jen servisy s ověřeným IČO</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Záznam nejde smazat</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Majitel nepotřebuje účet</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>První 3 měsíce zdarma</li>
       </ul>
     </div>
 
     <div class="mock" aria-hidden="true">
       <span class="mock-label">Ukázka aplikace</span>
       <div class="tablet">
-        <div class="app-bar"><span class="mini-logo"></span>ESK <span>Váš autoservis</span></div>
+        <div class="app-bar"><span class="mini-logo">ESK</span>Elektronická servisní kniha <span>Váš autoservis</span></div>
         <div class="app-tabs"><span class="on">Nový servis</span><span>Servisy</span><span>Vozidla</span><span>Připomínky</span></div>
         <div class="app-body">
           <div class="app-title">Zapsat servis</div>
@@ -154,7 +155,7 @@
       <div class="node"><svg aria-hidden="true"><use href="#i-car"/></svg><b>Majitel auta</b><span>přijede na servis</span></div>
       <div class="arrow">platí za zápis<i></i><small>položka na faktuře</small></div>
       <div class="node"><svg aria-hidden="true"><use href="#i-wrench"/></svg><b>Servis</b><span>opraví a zapíše</span></div>
-      <div class="arrow">platí licenci<i></i><small>měsíční paušál</small></div>
+      <div class="arrow">platí licenci<i></i><small>3 měsíce zdarma</small></div>
       <div class="node esk"><svg aria-hidden="true"><use href="#i-book"/></svg><b>ESK</b><span>uloží historii natrvalo</span></div>
     </div>
     <div class="flow-back">
@@ -199,7 +200,7 @@
           <div><span>Za měsíc</span><b id="month">6 000 Kč</b></div>
           <div><span>Za rok</span><b id="year">72 000 Kč</b></div>
         </div>
-        <p class="muted" style="margin:1rem 0 0">Jen příklad. Cenu zápisu určujete vy, licence je pevný měsíční paušál.</p>
+        <p class="muted" style="margin:1rem 0 0">Jen příklad. Cenu zápisu určujete vy. Licenci máte první 3 měsíce zdarma.</p>
       </form>
     </div>
 
@@ -229,9 +230,9 @@
     </div>
     <div class="owner-visual" aria-hidden="true">
       <div class="qr-card">
-        <div class="qr-top"><svg><use href="#logo"/></svg>Servisní historie vozu</div>
+        <div class="qr-top"><span class="brand-mark">ESK</span>Servisní historie vozu</div>
         <div class="qr">
-          <svg viewBox="0 0 33 33" class="segno"><path class="qrline" stroke="#0f1b2d" d="M0 0.5h7m1 0h2m6 0h1m2 0h2m1 0h2m2 0h7m-33 1h1m5 0h1m2 0h1m2 0h2m4 0h1m2 0h2m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m3 0h1m3 0h2m2 0h1m2 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h1m3 0h2m1 0h2m2 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h2m2 0h2m1 0h1m4 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m2 0h1m3 0h2m3 0h1m5 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h2m1 0h2m1 0h2m3 0h2m1 0h2m-24 1h7m3 0h1m2 0h2m1 0h1m4 0h1m1 0h1m2 0h2m3 0h1m-32 1h1m3 0h1m1 0h2m1 0h2m1 0h3m1 0h5m1 0h1m2 0h2m1 0h2m1 0h1m-31 1h5m1 0h2m1 0h3m1 0h3m3 0h1m3 0h2m1 0h1m1 0h2m-32 1h2m5 0h4m1 0h2m1 0h1m1 0h2m1 0h3m1 0h2m2 0h4m-31 1h2m3 0h1m6 0h1m8 0h1m1 0h2m1 0h3m2 0h1m-33 1h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h4m1 0h4m1 0h5m1 0h1m1 0h2m-33 1h4m2 0h1m1 0h2m1 0h1m3 0h1m5 0h2m2 0h2m1 0h2m1 0h1m-31 1h1m5 0h4m1 0h7m1 0h2m1 0h1m1 0h4m1 0h1m-31 1h1m2 0h4m1 0h1m2 0h1m3 0h1m1 0h4m1 0h4m1 0h2m3 0h1m-33 1h1m2 0h3m5 0h1m2 0h2m1 0h1m1 0h2m2 0h1m1 0h3m1 0h2m1 0h1m-33 1h5m1 0h3m5 0h1m1 0h1m1 0h1m1 0h1m4 0h1m1 0h2m1 0h2m-23 1h1m2 0h1m3 0h1m1 0h1m2 0h1m3 0h6m1 0h1m-32 1h1m2 0h1m1 0h1m1 0h4m2 0h1m3 0h2m2 0h4m1 0h3m1 0h2m-33 1h3m1 0h1m5 0h1m1 0h1m2 0h1m3 0h2m2 0h2m1 0h1m2 0h1m2 0h1m-33 1h1m1 0h1m3 0h1m3 0h1m2 0h1m1 0h3m2 0h1m3 0h1m3 0h2m1 0h1m-32 1h1m3 0h1m2 0h2m1 0h1m2 0h1m1 0h1m4 0h5m1 0h2m1 0h2m-31 1h1m1 0h2m2 0h3m1 0h6m1 0h2m5 0h5m2 0h2m-25 1h1m1 0h1m1 0h1m1 0h2m1 0h4m3 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h1m2 0h1m1 0h1m1 0h1m4 0h2m1 0h2m1 0h1m1 0h1m1 0h1m-31 1h1m5 0h1m1 0h6m2 0h2m1 0h6m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m3 0h1m3 0h1m1 0h6m-30 1h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h2m1 0h3m1 0h2m1 0h1m2 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m10 0h2m2 0h2m1 0h2m-31 1h1m5 0h1m1 0h1m6 0h1m1 0h2m1 0h2m3 0h1m2 0h3m-31 1h7m2 0h2m2 0h1m2 0h1m1 0h1m3 0h4m1 0h1m1 0h1m1 0h1"/></svg>
+          <svg viewBox="0 0 33 33" class="segno"><path class="qrline" stroke="#17191c" d="M0 0.5h7m1 0h2m6 0h1m2 0h2m1 0h2m2 0h7m-33 1h1m5 0h1m2 0h1m2 0h2m4 0h1m2 0h2m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m3 0h1m3 0h2m2 0h1m2 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h1m3 0h2m1 0h2m2 0h3m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h2m2 0h2m1 0h1m4 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m2 0h1m3 0h2m3 0h1m5 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-24 1h2m1 0h2m1 0h2m3 0h2m1 0h2m-24 1h7m3 0h1m2 0h2m1 0h1m4 0h1m1 0h1m2 0h2m3 0h1m-32 1h1m3 0h1m1 0h2m1 0h2m1 0h3m1 0h5m1 0h1m2 0h2m1 0h2m1 0h1m-31 1h5m1 0h2m1 0h3m1 0h3m3 0h1m3 0h2m1 0h1m1 0h2m-32 1h2m5 0h4m1 0h2m1 0h1m1 0h2m1 0h3m1 0h2m2 0h4m-31 1h2m3 0h1m6 0h1m8 0h1m1 0h2m1 0h3m2 0h1m-33 1h1m1 0h1m1 0h2m1 0h1m3 0h1m1 0h4m1 0h4m1 0h5m1 0h1m1 0h2m-33 1h4m2 0h1m1 0h2m1 0h1m3 0h1m5 0h2m2 0h2m1 0h2m1 0h1m-31 1h1m5 0h4m1 0h7m1 0h2m1 0h1m1 0h4m1 0h1m-31 1h1m2 0h4m1 0h1m2 0h1m3 0h1m1 0h4m1 0h4m1 0h2m3 0h1m-33 1h1m2 0h3m5 0h1m2 0h2m1 0h1m1 0h2m2 0h1m1 0h3m1 0h2m1 0h1m-33 1h5m1 0h3m5 0h1m1 0h1m1 0h1m1 0h1m4 0h1m1 0h2m1 0h2m-23 1h1m2 0h1m3 0h1m1 0h1m2 0h1m3 0h6m1 0h1m-32 1h1m2 0h1m1 0h1m1 0h4m2 0h1m3 0h2m2 0h4m1 0h3m1 0h2m-33 1h3m1 0h1m5 0h1m1 0h1m2 0h1m3 0h2m2 0h2m1 0h1m2 0h1m2 0h1m-33 1h1m1 0h1m3 0h1m3 0h1m2 0h1m1 0h3m2 0h1m3 0h1m3 0h2m1 0h1m-32 1h1m3 0h1m2 0h2m1 0h1m2 0h1m1 0h1m4 0h5m1 0h2m1 0h2m-31 1h1m1 0h2m2 0h3m1 0h6m1 0h2m5 0h5m2 0h2m-25 1h1m1 0h1m1 0h1m1 0h2m1 0h4m3 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h1m2 0h1m1 0h1m1 0h1m4 0h2m1 0h2m1 0h1m1 0h1m1 0h1m-31 1h1m5 0h1m1 0h6m2 0h2m1 0h6m3 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m3 0h1m3 0h1m1 0h6m-30 1h1m1 0h3m1 0h1m1 0h1m1 0h2m3 0h2m1 0h3m1 0h2m1 0h1m2 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h2m10 0h2m2 0h2m1 0h2m-31 1h1m5 0h1m1 0h1m6 0h1m1 0h2m1 0h2m3 0h1m2 0h3m-31 1h7m2 0h2m2 0h1m2 0h1m1 0h1m3 0h4m1 0h1m1 0h1m1 0h1"/></svg>
           <p>Naskenujte telefonem. Nebo na webu ESK zadejte VIN a tento kód:<code>JPT4·P48H·44</code></p>
         </div>
       </div>
@@ -269,10 +270,10 @@
         <svg viewBox="0 0 320 140" role="img">
           <g stroke="#ece8de" stroke-width="1"><path d="M20 120H305M20 87H305M20 54H305M20 21H305"/></g>
           <text x="0" y="123">0</text><text x="0" y="90">50k</text><text x="0" y="57">100k</text><text x="0" y="24">150k</text>
-          <polyline fill="none" stroke="#0f1b2d" stroke-width="2.5" stroke-linejoin="round" points="34,112 67,95 100,80 133,65 166,49 199,34 232,20"/>
+          <polyline fill="none" stroke="#e8590c" stroke-width="3" stroke-linejoin="round" points="34,112 67,95 100,80 133,65 166,49 199,34 232,20"/>
           <polyline fill="none" stroke="#b8322a" stroke-width="2.5" stroke-dasharray="5 4" points="232,20 265,56"/>
-          <polyline fill="none" stroke="#0f1b2d" stroke-width="2.5" points="265,56 298,42"/>
-          <g fill="#0f1b2d"><circle cx="34" cy="112" r="3.5"/><circle cx="67" cy="95" r="3.5"/><circle cx="100" cy="80" r="3.5"/><circle cx="133" cy="65" r="3.5"/><circle cx="166" cy="49" r="3.5"/><circle cx="199" cy="34" r="3.5"/><circle cx="232" cy="20" r="3.5"/><circle cx="298" cy="42" r="3.5"/></g>
+          <polyline fill="none" stroke="#e8590c" stroke-width="3" points="265,56 298,42"/>
+          <g fill="#17191c"><circle cx="34" cy="112" r="3.5"/><circle cx="67" cy="95" r="3.5"/><circle cx="100" cy="80" r="3.5"/><circle cx="133" cy="65" r="3.5"/><circle cx="166" cy="49" r="3.5"/><circle cx="199" cy="34" r="3.5"/><circle cx="232" cy="20" r="3.5"/><circle cx="298" cy="42" r="3.5"/></g>
           <circle cx="265" cy="56" r="6" fill="#b8322a" stroke="#fff" stroke-width="2"/>
           <text x="26" y="136">2014</text><text x="125" y="136">2017</text><text x="224" y="136">2020</text><text x="282" y="136">2022</text>
         </svg>
@@ -307,19 +308,19 @@
     </div>
     <div class="prices">
       <article class="price main">
-        <span class="tag">Pro servisy</span>
+        <span class="tag">První 3 měsíce zdarma</span>
         <p class="who">Autoservis</p>
         <h3>Licence ESK</h3>
-        <p class="amount">Měsíční paušál</p>
-        <p class="per">Cenu vám pošleme. Bez závazku na roky.</p>
+        <p class="amount">Na vyžádání</p>
+        <p class="per">Cenu vám pošleme. První 3 měsíce zkoušíte zdarma.</p>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Neomezený počet zápisů</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zápisy servisu k VIN</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Účty pro všechny mechaniky</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Připomínky dalšího servisu</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tisk karet s&nbsp;QR kódem</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Export zápisů do Excelu</li>
         </ul>
-        <a class="btn btn-primary" href="#kontakt">Chci nabídku</a>
+        <a class="btn btn-primary" href="#kontakt">Chci cenovou nabídku</a>
       </article>
       <article class="price">
         <p class="who">Majitel auta</p>
@@ -363,7 +364,8 @@
       <details><summary>Prodávám auto. Co s&nbsp;historií?</summary><p>Pošlete kupci odkaz na historii. Po prodeji nechte v&nbsp;servisu vytvořit nový kód. Starý odkaz přestane platit a nový majitel pokračuje ve stejné historii.</p></details>
       <details><summary>Co uvidí cizí člověk, když zná VIN?</summary><p>Jen souhrn: počet záznamů, typy prací a průběh kilometrů. Žádná jména, telefony, SPZ ani ceny.</p></details>
       <details><summary>Potřebuje servis nějaký program nebo nový počítač?</summary><p>Ne. ESK běží v&nbsp;prohlížeči na telefonu, tabletu i počítači. Nic se neinstaluje a nic se neaktualizuje.</p></details>
-      <details><summary>Kolik stojí zápis pro zákazníka?</summary><p>To určuje servis. ESK si od servisu bere jen měsíční licenci, ne poplatek za každý zápis.</p></details>
+      <details><summary>Kolik stojí licence pro servis?</summary><p>Cenu vám pošleme na vyžádání. První 3 měsíce máte ESK zdarma, takže si ho v&nbsp;dílně vyzkoušíte bez rizika.</p></details>
+      <details><summary>Kolik stojí zápis pro zákazníka?</summary><p>To určuje servis. ESK si od servisu bere jen licenci.</p></details>
       <details><summary>Kdy to spustíte?</summary><p>Aplikace je hotová a teď hledáme první servisy, které ji vyzkouší v&nbsp;provozu. Ozvěte se a ukážeme vám ji.</p></details>
     </div>
   </div>
@@ -374,7 +376,7 @@
     <div class="cta">
       <div>
         <h2 id="cta-title">Chcete ESK ve svém servisu?</h2>
-        <p>Hledáme první servisy. Napište nám a ukážeme vám, jak to funguje. Zabere to 15 minut.</p>
+        <p>První 3 měsíce máte ESK zdarma. Napište nám a ukážeme vám, jak to funguje. Zabere to 15 minut.</p>
       </div>
       <a class="btn btn-primary" href="mailto:esk@example.com?subject=Chci%20ESK%20do%20servisu"><svg aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
     </div>
@@ -385,7 +387,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 ESK – Elektronická servisní kniha</span>
+    <span>© 2026 ESK – Elektronická servisní kniha. Všechna práva vyhrazena.</span>
     <nav aria-label="Odkazy v patičce">
       <a href="#servisy">Pro servisy</a>
       <a href="#majitele">Pro majitele</a>
