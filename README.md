@@ -6,6 +6,7 @@ Prezentační web služby **Vozopis – elektronická servisní kniha**. Jedna s
 - `assets/style.css` – vzhled
 - `assets/fonts/` – Barlow a Barlow Condensed (stejné jako v aplikaci) hostované lokálně, takže se nic nenačítá od Googlu a web nepotřebuje cookie lištu
 - `assets/og.png` – náhled pro sdílení na sociálních sítích
+- `robots.txt` a `sitemap.xml` – pro vyhledávače. Když přidáte novou stránku, doplňte ji do mapy a upravte `lastmod`
 
 Lokálně: otevřete `index.html` v prohlížeči.
 
