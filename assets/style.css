@@ -92,6 +92,9 @@ p { margin: 0 0 1em; }
 .hero .eyebrow { color: var(--amber); }
 .hero .lead { color: #c3ccda; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0 1.8rem; }
+.hero-owner { margin: -.4rem 0 1.6rem; color: #c3ccda; }
+.hero-owner b { color: #fff; }
+.hero-owner a { color: var(--amber); white-space: nowrap; }
 .checks { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; color: #c3ccda; font-size: .95rem; }
 .checks li { display: flex; align-items: center; gap: .45em; }
 .checks svg { width: 18px; height: 18px; color: var(--amber); flex: none; }
