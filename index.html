@@ -90,7 +90,7 @@
       <span class="mock-label">Ukázka aplikace</span>
       <div class="tablet">
         <div class="app-bar"><span class="mini-logo">ESK</span>Elektronická servisní kniha <span>Váš autoservis</span></div>
-        <div class="app-tabs"><span class="on">Nový servis</span><span>Servisy</span><span>Vozidla</span><span>Připomínky</span></div>
+        <div class="app-tabs"><span class="on">Nový servis</span><span>Zápisy</span><span>Vozidla</span><span>Připomínky</span></div>
         <div class="app-body">
           <div class="app-title">Zapsat servis</div>
           <div class="car-chip"><b>Škoda Octavia</b><span class="plate">2AB 3456</span><code>TMBJJ7NE1J0123456</code></div>
@@ -210,7 +210,7 @@
     <div class="features">
       <div class="feature"><svg aria-hidden="true"><use href="#i-clock"/></svg><h3>Zápis za minutu</h3><p>Najdete auto podle SPZ nebo VIN, vyberete úkony ze seznamu a uložíte. Žádné papírování.</p></div>
       <div class="feature"><svg aria-hidden="true"><use href="#i-hand"/></svg><h3>Velká tlačítka</h3><p>Navržená do dílny. Ovládáte to prstem na tabletu, klidně i v&nbsp;rukavicích.</p></div>
-      <div class="feature"><svg aria-hidden="true"><use href="#i-bell"/></svg><h3>Připomínky servisu</h3><p>Seznam zákazníků, kterým se blíží výměna oleje nebo STK. Plný kalendář bez reklamy.</p></div>
+      <div class="feature"><svg aria-hidden="true"><use href="#i-bell"/></svg><h3>Připomínky servisu</h3><p>Seznam zákazníků, kterým se blíží výměna oleje, STK nebo práce, kterou odložili. Plný kalendář bez reklamy.</p></div>
       <div class="feature"><svg aria-hidden="true"><use href="#i-qr"/></svg><h3>Karta s&nbsp;QR kódem</h3><p>Zákazníkovi vytisknete kartu do auta. Historii pak má vždy po ruce, s&nbsp;vaším jménem.</p></div>
       <div class="feature"><svg aria-hidden="true"><use href="#i-gauge"/></svg><h3>Hlídá tachometr</h3><p>Když někdo zapíše méně kilometrů než minule, ESK upozorní. U&nbsp;každého stavu je vidět, kdo ho zapsal.</p></div>
       <div class="feature"><svg aria-hidden="true"><use href="#i-team"/></svg><h3>Celý tým</h3><p>Každý mechanik má svůj účet. Vidíte, kdo co zapsal. Když někdo odejde, účet vypnete.</p></div>
@@ -225,9 +225,9 @@
       <h2 id="own-title">Auto, které se lépe prodá</h2>
       <p class="lead">Papírová knížka se ztratí a razítko se dá zfalšovat. V&nbsp;ESK je každý záznam od skutečného servisu s&nbsp;IČO a nejde ho dodatečně změnit.</p>
       <ul class="ticks">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Jedna historie pro všechny servisy</b><span>Olej u&nbsp;jednoho, pneu u&nbsp;druhého. Všechno je pohromadě podle VIN.</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Jedna historie pro všechny servisy</b><span>Olej u&nbsp;jednoho, pneu u&nbsp;druhého. Všechno je pohromadě podle VIN, i&nbsp;když jezdíte mimo značkový servis.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Bez registrace a bez aplikace</b><span>Naskenujete QR kód z&nbsp;karty, nebo zadáte VIN a kód. Hotovo.</span></div></li>
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odkaz pro kupujícího</b><span>Při prodeji pošlete odkaz. Kupující uvidí každý servis, kilometry i ceny.</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odkaz a prodejní karta pro kupujícího</b><span>Při prodeji pošlete odkaz nebo dejte za okno kartu s&nbsp;QR kódem. Kupující uvidí každý servis a kilometry, ceny a faktury zůstanou vám.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Po prodeji nový kód</b><span>Servis vytvoří nový kód a starý odkaz přestane platit. Historie jde s&nbsp;autem.</span></div></li>
       </ul>
       <p style="margin-top:1.4rem" class="needs-dir" hidden><a href="#najit-servis"><b>Najít servis s&nbsp;ESK v&nbsp;seznamu →</b></a></p>
@@ -285,7 +285,7 @@
       <h2 id="buy-title">Kupujete ojetinu? Zadejte VIN a datum registrace.</h2>
       <p class="lead">Zdarma uvidíte, kolik záznamů auto má, jaké práce se dělaly a jak rostly kilometry. Když zapsané hodnoty na sebe nenavazují, ESK to označí.</p>
       <p>Datum první registrace najdete v&nbsp;malém techničáku (řádek B). Historii tak uvidí jen ten, kdo má auto a doklady před sebou, ne každý, kdo zná VIN. Chráníme tím soukromí majitele. Když zadáte i stav tachometru, porovnáme ho s&nbsp;posledním zápisem.</p>
-      <p>Celou historii včetně cen vám ukáže prodávající, pokud ji má. Stačí, když vám pošle odkaz. Když ho poslat nechce, je to také odpověď.</p>
+      <p>Celou historii vám ukáže prodávající, pokud ji má: pošle vám odkaz pro kupující nebo má za oknem kartu s&nbsp;QR kódem. Když ho poslat nechce, je to také odpověď.</p>
     </div>
     <div class="summary" aria-hidden="true">
       <div class="summary-head"><b>Ověření: VIN + datum registrace</b><code>WVWZZZ1KZ8W765432</code></div>
@@ -391,12 +391,12 @@
       <h2 id="faq-title">Na co se ptají servisy i majitelé</h2>
     </div>
     <div class="faq">
-      <details><summary>Nahrazuje ESK servisní knížku od výrobce?</summary><p>Ne, doplňuje ji. Hodí se hlavně pro auta, která jezdí do nezávislých servisů. Do značkové elektronické knížky nezávislý servis většinou zapisovat nemůže, do ESK ano.</p></details>
+      <details><summary>Nahrazuje ESK servisní knížku od výrobce?</summary><p>Ne, doplňuje ji. Hodí se hlavně pro auta, která jezdí do nezávislých servisů. Do značkové elektronické knížky nezávislý servis většinou zapisovat nemůže, do ESK ano. U&nbsp;servisu mimo značku tak značková knížka často zápisy nemá, ESK drží historii napříč servisy.</p></details>
       <details><summary>Co když jezdím do více servisů?</summary><p>Nevadí. Všechny servisy zapisují do stejné historie podle VIN. Vy vidíte všechno pohromadě.</p></details>
       <details><summary>Musím si jako majitel zakládat účet?</summary><p>Ne. Historii otevřete QR kódem z&nbsp;karty, nebo zadáte VIN a přístupový kód. Žádné heslo, žádná aplikace.</p></details>
       <details><summary>Co když servis zapíše chybu?</summary><p>Servis záznam zruší, napíše důvod a zapíše ho znovu správně. Původní záznam zůstane vidět přeškrtnutý, takže nikdo nemůže historii potichu upravit.</p></details>
-      <details><summary>Prodávám auto. Co s&nbsp;historií?</summary><p>Pošlete kupujícímu odkaz na historii. Po prodeji nechte v&nbsp;servisu vytvořit nový kód. Starý odkaz přestane platit a nový majitel pokračuje ve stejné historii.</p></details>
-      <details><summary>Co uvidí cizí člověk, když zná VIN?</summary><p>Nic. Souhrn (počet záznamů, typy prací, průběh kilometrů) ukážeme jen tomu, kdo zadá i datum první registrace z&nbsp;techničáku, tedy kdo má auto a doklady před sebou. Jména, telefony, SPZ ani ceny neuvidí nikdo cizí. Majitel může ověření pro své auto úplně vypnout.</p></details>
+      <details><summary>Prodávám auto. Co s&nbsp;historií?</summary><p>Pošlete kupujícímu odkaz pro kupující (bez cen a faktur), nebo si vytiskněte prodejní kartu s&nbsp;QR kódem a textem do inzerátu. Po prodeji nechte v&nbsp;servisu vytvořit nový kód. Staré odkazy přestanou platit a nový majitel pokračuje ve stejné historii.</p></details>
+      <details><summary>Co uvidí cizí člověk, když zná VIN?</summary><p>Nic. Souhrn (počet záznamů, typy prací, průběh kilometrů) ukážeme jen tomu, kdo zadá i datum první registrace z&nbsp;techničáku, tedy kdo má auto a doklady před sebou. Jména, telefony, SPZ ani ceny neuvidí nikdo cizí. Kupující, kterému majitel pošle odkaz, vidí servisy a kilometry, ceny ne. Majitel může ověření pro své auto úplně vypnout.</p></details>
       <details><summary>Je stav kilometrů v&nbsp;ESK důkaz?</summary><p>Ne. Údaje zapisují servisy a ESK je neověřuje. Když hodnoty nenavazují, může jít o&nbsp;chybu při zápisu, výměnu přístroje i zásah do tachometru. Berte to jako důvod se zeptat, ne jako rozsudek.</p></details>
       <details><summary>Chci opravit nebo smazat své údaje. Jak?</summary><p>Napište servisu, který záznam zapsal, nebo nám. Chybný záznam servis zruší a zapíše správně. Jméno, telefon a přílohy smaže na požádání. Samotný záznam o&nbsp;servisu (datum, km, práce) zůstává, aby historie auta byla úplná.</p></details>
       <details><summary>Potřebuje servis nějaký program nebo nový počítač?</summary><p>Ne. ESK běží v&nbsp;prohlížeči na telefonu, tabletu i počítači. Nic se neinstaluje a nic se neaktualizuje.</p></details>
