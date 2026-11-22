@@ -28,7 +28,7 @@
 <section id="verejnost"><h1>Podmínky užívání pro majitele a kupující</h1>
 <ol>
 <li>
-<p><strong>Služba je zdarma.</strong> Prohlížení historie s přístupovým kódem nebo QR kódem i ověření vozidla podle VIN a data první registrace nic nestojí a nevyžaduje registraci. U vozidla bez uloženého data první registrace se souhrn ověřuje podle VIN a stavu tachometru.</p>
+<p><strong>Služba je zdarma.</strong> Prohlížení historie s přístupovým kódem nebo QR kódem i ověření vozidla podle VIN a data první registrace nic nestojí a nevyžaduje registraci. Ověření podle VIN funguje jen u aut, jejichž majitel ho zapnul.</p>
 </li>
 <li>
 <p><strong>Kdo údaje zapisuje.</strong> Záznamy zapisují nezávislé autoservisy registrované pod IČO. Provozovatel je <strong>neověřuje</strong>. Servisní historie je vodítko, ne úřední doklad ani znalecký posudek. U každého stavu tachometru je uvedeno, který servis ho zapsal.</p>
@@ -68,7 +68,7 @@
 <ul>
 <li>a) <strong>Servis</strong> vidí své Záznamy vždy. Technickou historii od jiných Servisů (datum, stav tachometru, druh práce, který servis zápis provedl) vidí jen ke konkrétní zakázce: 30 dní od založení vozidla, od svého Záznamu nebo od potvrzení „Auto je u nás v servisu“, které se zaznamená. Ceny, přílohy, poznámky, důvody zrušení a kontakty na zákazníky vidí jen u Záznamů, které sám vytvořil.</li>
 <li>b) <strong>Majitel vozidla</strong> po zadání přístupového kódu nebo naskenování QR kódu vidí technickou historii vozidla (datum, stav tachometru, práce, odložené práce, příští servis, servis, který Záznam zapsal). Ceny, přílohy, poznámky, důvody zrušení ani kontakty nevidí; ty má jen Servis, který Záznam zapsal, a ten je předává svému zákazníkovi sám.</li>
-<li>c) <strong>Kupující</strong>, který zadá VIN a datum první registrace vozidla, vidí souhrn: počet Záznamů, druhy prací, průběh stavu tachometru a servisy, které stavy zapsaly. U vozidla bez uloženého data první registrace se souhrn ověřuje podle VIN a stavu tachometru. Majitel může tento souhrn pro své vozidlo vypnout.</li>
+<li>c) <strong>Kupující</strong>, který zadá VIN a datum první registrace vozidla, vidí souhrn: počet Záznamů, druhy prací, průběh stavu tachometru a servisy, které stavy zapsaly – jen pokud majitel ověření pro své vozidlo zapnul (výchozí stav je vypnuto) a vozidlo má uložené datum první registrace. Majitel může ověření kdykoli vypnout.</li>
 <li>d) <strong>Kupující s odkazem pro kupující</strong> od majitele (nebo QR z prodejní karty) vidí, dokud odkaz platí (majitel ho může kdykoli vyměnit a nastavit mu konec platnosti), Záznamy, práce, stavy tachometru, stav baterie a servis, který Záznam zapsal; ceny, přílohy, poznámky a kontakty ne.</li>
 </ul>
 <p>2.3. Provozovatel Záznamy <strong>neověřuje</strong>. Upozornění, že zapsané stavy tachometru na sebe nenavazují, je automatický výpočet z údajů Servisů, ne tvrzení Provozovatele o stočení tachometru nebo o jednání kohokoli.</p>
@@ -103,7 +103,7 @@
 <p>7.3. Podpora: e-mailem na romanzdk@gmail.com, v pracovní dny, odpověď obvykle do 5 pracovních dnů.</p>
 <h2>8. Odpovědnost Provozovatele</h2>
 <p>8.1. Provozovatel odpovídá za řádné technické fungování služby. <strong>Neodpovídá za správnost Záznamů</strong>, které zapsaly Servisy, ani za rozhodnutí, která na jejich základě kdokoli učiní.</p>
-<p>8.2. Celková odpovědnost Provozovatele vůči Servisu za škodu je omezena částkou <strong>poplatků zaplacených Servisem za posledních 6 měsíců</strong>. Omezení se nepoužije na škodu způsobenou úmyslně nebo z hrubé nedbalosti a na újmu na přirozených právech člověka (§ 2898 OZ).</p>
+<p>8.2. Celková odpovědnost Provozovatele vůči Servisu za škodu je omezena částkou <strong>poplatků zaplacených Servisem za posledních 6 měsíců, nejméně však 5 000 Kč</strong>. Omezení se nepoužije na škodu způsobenou úmyslně nebo z hrubé nedbalosti a na újmu na přirozených právech člověka (§ 2898 OZ).</p>
 <p>8.3. Provozovatel neodpovídá za ušlý zisk ani za nepřímé škody.</p>
 <h2>9. Nahlášení nezákonného nebo chybného obsahu (DSA)</h2>
 <p>9.1. Kdokoli může nahlásit Záznam, který považuje za nezákonný nebo nepravdivý, e-mailem na romanzdk@gmail.com s uvedením VIN, data Záznamu a důvodu.</p>
@@ -158,8 +158,8 @@
 <td>součinnost do 5 pracovních dnů</td>
 </tr>
 <tr>
-<td>Námitka proti veřejnému souhrnu</td>
-<td>majitel si ho vypne sám; jinak Provozovatel</td>
+<td>Veřejný souhrn podle VIN</td>
+<td>výchozí stav vypnuto, zapíná a vypíná ho majitel sám; námitky ostatních vyřizuje Provozovatel</td>
 <td>–</td>
 </tr>
 <tr>
@@ -238,7 +238,7 @@
 <p>Provedené práce na vašem voze zapisujeme do elektronické servisní knihy Vozopis: VIN, údaje o voze, datum, stav tachometru a co jsme dělali. Historie zůstává u vozu i pro další majitele a pomáhá při prodeji dokázat, že auto bylo udržované.</p>
 <ul>
 <li><strong>Vy</strong> (s kódem nebo QR z karty) vidíte technickou historii auta: data, kilometry, práce a servisy. Cenu a fakturu dostáváte od nás, ve Vozopisu je nikdo jiný nevidí.</li>
-<li><strong>Kupující</strong> s VIN a datem první registrace z techničáku vidí jen souhrn: počet záznamů, druhy prací a průběh kilometrů. U vozidla bez uloženého data první registrace se souhrn ověřuje podle VIN a stavu tachometru. Tento pohled můžete na stránce historie sami vypnout.</li>
+<li><strong>Kupující</strong> s VIN a datem první registrace z techničáku vidí jen souhrn: počet záznamů, druhy prací a průběh kilometrů – a jen pokud si to na stránce historie sami zapnete, třeba když auto prodáváte. Výchozí stav je vypnuto.</li>
 <li><strong>Kupující s odkazem od vás</strong> (odkaz pro kupující nebo QR z prodejní karty) vidí záznamy, práce, kilometry a stav baterie, bez cen, faktur a poznámek.</li>
 <li><strong>Jiné servisy</strong> vidí technickou historii jen tehdy, když mají auto v servisu (30 dní), ne vaše jméno, telefon, ceny, faktury ani poznámky.</li>
 </ul>
