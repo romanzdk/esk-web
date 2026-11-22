@@ -75,6 +75,7 @@
       <div class="hero-cta">
         <a class="btn btn-primary" href="#servisy"><svg aria-hidden="true"><use href="#i-wrench"/></svg>Jsem servis</a>
         <a class="btn btn-ghost" href="#majitele"><svg aria-hidden="true"><use href="#i-car"/></svg>Mám auto</a>
+        <a class="btn btn-ghost" href="#najit-servis"><svg aria-hidden="true"><use href="#i-search"/></svg>Seznam servisů</a>
       </div>
       <ul class="checks">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zapisují jen servisy s ověřeným IČO</li>
@@ -228,6 +229,7 @@
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odkaz pro kupce</b><span>Při prodeji pošlete odkaz. Kupec uvidí každý servis, kilometry i ceny.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Po prodeji nový kód</b><span>Servis vytvoří nový kód a starý odkaz přestane platit. Historie jde s&nbsp;autem.</span></div></li>
       </ul>
+      <p style="margin-top:1.4rem"><a href="#najit-servis"><b>Najít servis s&nbsp;ESK v&nbsp;seznamu →</b></a></p>
       <div class="recommend">
         <p><b>Váš servis do ESK ještě nezapisuje?</b> Pošlete mu krátký e-mail. Text je připravený, stačí doplnit adresu servisu.</p>
         <a class="btn btn-dark" href="mailto:?subject=Zapisujete%20do%20ESK%3F&amp;body=Dobr%C3%BD%20den%2C%0A%0Acht%C4%9Bl%28a%29%20bych%20m%C3%ADt%20servisn%C3%AD%20historii%20sv%C3%A9ho%20auta%20v%20elektronick%C3%A9%20servisn%C3%AD%20knize%20ESK.%20Servis%20zap%C3%AD%C5%A1e%20opravu%20k%20VIN%20a%20j%C3%A1%20dostanu%20kartu%20s%20QR%20k%C3%B3dem.%20Hod%C3%AD%20se%20mi%20to%20i%20p%C5%99i%20prodeji%20auta.%0A%0APro%20servis%20je%20ESK%20prvn%C3%AD%203%20m%C4%9Bs%C3%ADce%20zdarma%3A%20https%3A//romanzdk.github.io/esk-web/%23servisy%0A%0AD%C4%9Bkuji"><svg aria-hidden="true"><use href="#i-mail"/></svg>Doporučit ESK servisu</a>
@@ -259,13 +261,15 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Najít servis</p>
-      <h2 id="find-title">Kde vám zapíšou do ESK</h2>
-      <p class="lead">Autoservisy s&nbsp;ověřeným IČO, které do ESK zapisují. Hledejte podle města, PSČ nebo názvu.</p>
+      <h2 id="find-title">Seznam autoservisů s&nbsp;ESK</h2>
+      <p class="lead">Všechny autoservisy, které do ESK zapisují. Každý má IČO ověřené v&nbsp;obchodním rejstříku. Vyberte si servis ve svém okolí a řekněte si o&nbsp;zápis do ESK.</p>
     </div>
-    <div id="dir-search" hidden>
-      <input type="search" id="dir-q" placeholder="Město, PSČ nebo název servisu" aria-label="Město, PSČ nebo název servisu">
+    <div class="dir-panel">
+      <label for="dir-q" class="dir-label">Hledat v&nbsp;seznamu servisů</label>
+      <input type="search" id="dir-q" placeholder="Město, PSČ nebo název servisu" autocomplete="off">
+      <p id="dir-status" class="dir-status" aria-live="polite">Načítám seznam servisů…</p>
+      <div id="dir-list"></div>
     </div>
-    <div id="dir-list" aria-live="polite"></div>
     <div id="dir-empty" class="recommend" hidden>
       <p><b id="dir-empty-title">Zapojují se první servisy.</b> Váš servis tu ještě není? Doporučte mu ESK. Pro servis jsou první 3&nbsp;měsíce zdarma.</p>
       <a class="btn btn-dark" href="mailto:?subject=Zapisujete%20do%20ESK%3F&amp;body=Dobr%C3%BD%20den%2C%0A%0Acht%C4%9Bl%28a%29%20bych%20m%C3%ADt%20servisn%C3%AD%20historii%20sv%C3%A9ho%20auta%20v%20elektronick%C3%A9%20servisn%C3%AD%20knize%20ESK.%20Servis%20zap%C3%AD%C5%A1e%20opravu%20k%20VIN%20a%20j%C3%A1%20dostanu%20kartu%20s%20QR%20k%C3%B3dem.%20Hod%C3%AD%20se%20mi%20to%20i%20p%C5%99i%20prodeji%20auta.%0A%0APro%20servis%20je%20ESK%20prvn%C3%AD%203%20m%C4%9Bs%C3%ADce%20zdarma%3A%20https%3A//romanzdk.github.io/esk-web/%23servisy%0A%0AD%C4%9Bkuji"><svg aria-hidden="true"><use href="#i-mail"/></svg>Doporučit ESK servisu</a>
@@ -420,7 +424,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 ESK – Elektronická servisní kniha. Všechna práva vyhrazena. Tento web nepoužívá cookies ani měření návštěvnosti.</span>
+    <span>© 2026 ESK – Elektronická servisní kniha. Všechna práva vyhrazena.<br>Provozovatel: Roman Žydyk · <a href="mailto:romanzdk@gmail.com">romanzdk@gmail.com</a> · Tento web nepoužívá cookies.</span>
     <nav aria-label="Odkazy v patičce">
       <a href="#servisy">Pro servisy</a>
       <a href="#majitele">Pro majitele</a>
@@ -428,6 +432,8 @@
       <a href="#najit-servis">Najít servis</a>
       <a href="#cenik">Ceník</a>
       <a href="#faq">Otázky</a>
+      <a href="podminky.html">Podmínky</a>
+      <a href="ochrana-udaju.html">Ochrana osobních údajů</a>
     </nav>
   </div>
 </footer>
@@ -471,11 +477,15 @@
       map.href = "https://mapy.cz/zakladni?q=" + encodeURIComponent(w.name + ", " + w.address);
       map.target = "_blank"; map.rel = "noopener";
     }
+    const word = n => n === 1 ? "autoservis" : n >= 2 && n <= 4 ? "autoservisy" : "autoservisů";
+    document.getElementById("dir-status").textContent = !all.length
+      ? "Seznam je zatím prázdný. První servisy se do ESK právě zapojují."
+      : q ? `Nalezeno: ${shown.length} ${word(shown.length)} z ${all.length}.` : `V seznamu je ${all.length} ${word(all.length)}.`;
+    if (!all.length) list.append(el("div", "dir-placeholder", "Tady se objeví autoservisy z celé republiky, seřazené podle krajů."));
     document.getElementById("dir-empty").hidden = shown.length > 0;
     document.getElementById("dir-empty-title").textContent = all.length ? "Nic jsme nenašli." : "Zapojují se první servisy.";
   }
   fetch(DIR_URL).then(r => r.json()).catch(() => []).then(all => {
-    document.getElementById("dir-search").hidden = all.length === 0;
     document.getElementById("dir-q").addEventListener("input", () => renderDirectory(all));
     renderDirectory(all);
   });

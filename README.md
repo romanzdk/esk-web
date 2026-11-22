@@ -19,3 +19,7 @@ Všechna práva vyhrazena, žádné další použití bez písemného souhlasu. 
 
 Sekce „Najít servis“ načítá `assets/autoservisy.json` (teď prázdný seznam). Až aplikace ESK poběží na veřejné adrese, změňte v `index.html` konstantu `DIR_URL` na `https://<adresa aplikace>/autoservisy.json` – aplikace vrací stejný formát a povoluje načtení z jiné domény.
 
+## Podmínky a ochrana údajů
+
+`podminky.html` je vygenerovaná kopie návrhů z repa aplikace (`docs/pravni/*.md`, bez poznámek pro advokáta). Po změně podmínek ji vygenerujte znovu stejným postupem (Markdown → HTML) a commitněte. `ochrana-udaju.html` se píše ručně a má odpovídat stránce Ochrana osobních údajů v aplikaci.
+

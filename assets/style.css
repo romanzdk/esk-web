@@ -322,9 +322,25 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
 @media (max-width: 480px) { .result { grid-template-columns: 1fr; } }
 .recommend { margin-top: 1.8rem; padding: 1.2rem 1.3rem; border: 1px solid var(--line); border-left: 6px solid var(--amber); border-radius: var(--radius); background: var(--card); }
 .recommend p { margin: 0 0 1rem; }
-#dir-search input { width: 100%; font: inherit; font-size: 1.2rem; font-weight: 600; padding: 1rem 1.1rem; border: 2px solid var(--ink); border-radius: var(--radius); margin-bottom: 1.2rem; }
+.dir-panel { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--amber); border-radius: var(--radius); padding: clamp(1.2rem, 3vw, 2rem); box-shadow: var(--shadow); }
+.dir-label { display: block; font: 700 .85rem/1 var(--head); letter-spacing: .1em; text-transform: uppercase; margin-bottom: .6rem; }
+#dir-q { width: 100%; font: inherit; font-size: 1.2rem; font-weight: 600; padding: 1rem 1.1rem; border: 2px solid var(--ink); border-radius: var(--radius); }
+.dir-status { color: var(--muted); margin: .8rem 0 0; }
+.dir-placeholder { margin-top: 1.2rem; padding: 2.2rem 1rem; border: 2px dashed var(--line); border-radius: var(--radius); text-align: center; color: var(--muted); }
 .dir-region { margin: 1.6rem 0 .8rem; }
 .dir-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); }
 .dir-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.2rem 1.3rem; }
 .dir-card p { margin: .3rem 0; }
 .dir-meta { color: var(--muted); font-size: .9rem; }
+/* Podmínky + Ochrana osobních údajů */
+.doc { max-width: 52rem; padding-block: 2.5rem 4rem; }
+.doc h1 { margin: 0 0 1rem; }
+.doc h2 { margin: 2.2rem 0 .7rem; }
+.doc h3 { margin: 1.6rem 0 .5rem; }
+.doc section { border-top: 4px solid var(--amber); margin-top: 2.5rem; padding-top: .5rem; }
+.doc li { margin: .35rem 0; }
+.doc table { display: block; overflow-x: auto; border-collapse: collapse; margin: 1rem 0; }
+.doc th, .doc td { border: 1px solid var(--line); padding: .45rem .7rem; text-align: left; vertical-align: top; }
+.doc blockquote { margin: 1rem 0; padding: .8rem 1.1rem; border-left: 4px solid var(--line); background: var(--card); }
+.doc-note { padding: .9rem 1.1rem; border-left: 6px solid var(--amber); background: var(--card); margin-bottom: 1.2rem; }
+.doc section h1 { font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin: .8rem 0 1rem; }
