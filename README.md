@@ -1,6 +1,6 @@
-# ESK – promo web
+# Vozopis – promo web
 
-Prezentační web služby **Elektronická servisní kniha (ESK)**. Jedna statická stránka bez build kroku, hostovaná na GitHub Pages na doméně <https://eservisnikniha.cz> (soubor `CNAME`). DNS u Forpsi: A záznamy domény na 185.199.108.153, .109.153, .110.153, .111.153 a `www` jako CNAME na `romanzdk.github.io`.
+Prezentační web služby **Vozopis – elektronická servisní kniha**. Jedna statická stránka bez build kroku, hostovaná na GitHub Pages na doméně <https://vozopis.cz> (soubor `CNAME`). DNS u Forpsi: A záznamy domény na 185.199.108.153, .109.153, .110.153, .111.153 a `www` jako CNAME na `romanzdk.github.io`. Stará doména eservisnikniha.cz přesměrovává na vozopis.cz přes repozitář `romanzdk/eservisnikniha-redirect`.
 
 - `index.html` – celý obsah stránky
 - `assets/style.css` – vzhled
@@ -17,7 +17,7 @@ Všechna práva vyhrazena, žádné další použití bez písemného souhlasu. 
 
 ## Seznam servisů
 
-Sekce „Najít servis“ načítá `assets/autoservisy.json` (teď prázdný seznam). Až aplikace ESK poběží na veřejné adrese, změňte v `index.html` konstantu `DIR_URL` na `https://<adresa aplikace>/autoservisy.json` – aplikace vrací stejný formát a povoluje načtení z jiné domény.
+Sekce „Najít servis“ načítá `assets/autoservisy.json` (teď prázdný seznam). Až aplikace Vozopis poběží na veřejné adrese, změňte v `index.html` konstantu `DIR_URL` na `https://<adresa aplikace>/autoservisy.json` – aplikace vrací stejný formát a povoluje načtení z jiné domény.
 
 ## Podmínky a ochrana údajů
 
@@ -25,5 +25,5 @@ Sekce „Najít servis“ načítá `assets/autoservisy.json` (teď prázdný se
 
 ## Kontaktní formulář
 
-Formulář v sekci Kontakt odesílá zprávy do aplikace ESK (`/api/kontakt/`, zprávy uvidíte v administraci). Dokud aplikace neběží veřejně, je skrytý a zobrazuje se tlačítko „Napsat e-mail“. Po nasazení nastavte v `index.html` u `<form id="contact-form">` atribut `data-endpoint="https://<adresa aplikace>/api/kontakt/"`.
+Formulář v sekci Kontakt odesílá zprávy do aplikace Vozopis (`/api/kontakt/`, zprávy uvidíte v administraci). Dokud aplikace neběží veřejně, je skrytý a zobrazuje se tlačítko „Napsat e-mail“. Po nasazení nastavte v `index.html` u `<form id="contact-form">` atribut `data-endpoint="https://<adresa aplikace>/api/kontakt/"`.
 
