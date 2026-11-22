@@ -28,10 +28,10 @@
 <section id="verejnost"><h1>Podmínky užívání pro majitele a kupující</h1>
 <ol>
 <li>
-<p><strong>Služba je zdarma.</strong> Prohlížení historie s přístupovým kódem nebo QR kódem i ověření vozidla podle VIN a data první registrace nic nestojí a nevyžaduje registraci.</p>
+<p><strong>Služba je zdarma.</strong> Prohlížení historie s přístupovým kódem nebo QR kódem i ověření vozidla podle VIN a data první registrace nic nestojí a nevyžaduje registraci. U vozidla bez uloženého data první registrace se souhrn ověřuje podle VIN a stavu tachometru.</p>
 </li>
 <li>
-<p><strong>Kdo údaje zapisuje.</strong> Záznamy zapisují nezávislé autoservisy s ověřeným IČO. Provozovatel je <strong>neověřuje</strong>. Servisní historie je vodítko, ne úřední doklad ani znalecký posudek. U každého stavu tachometru je uvedeno, který servis ho zapsal.</p>
+<p><strong>Kdo údaje zapisuje.</strong> Záznamy zapisují nezávislé autoservisy registrované pod IČO. Provozovatel je <strong>neověřuje</strong>. Servisní historie je vodítko, ne úřední doklad ani znalecký posudek. U každého stavu tachometru je uvedeno, který servis ho zapsal.</p>
 </li>
 <li>
 <p><strong>Upozornění na kilometry.</strong> Když zapsané stavy tachometru na sebe nenavazují, Vozopis to automaticky označí. Příčinou může být chyba při zápisu, výměna přístroje i zásah do tachometru. Upozornění není tvrzení, že kilometry někdo stočil. Před koupí si vyžádejte vysvětlení a doklady od prodávajícího.</p>
@@ -67,8 +67,8 @@
 <p>2.2. Kdo co vidí:</p>
 <ul>
 <li>a) <strong>Servis</strong> vidí technickou historii každého vozidla (datum, stav tachometru, druh práce, který servis zápis provedl). Ceny, přílohy a kontakty na zákazníky vidí jen u Záznamů, které sám vytvořil.</li>
-<li>b) <strong>Majitel vozidla</strong> po zadání přístupového kódu nebo naskenování QR kódu vidí celou historii včetně cen a příloh, bez kontaktů na zákazníky.</li>
-<li>c) <strong>Kupující</strong>, který zadá VIN a datum první registrace vozidla, vidí souhrn: počet Záznamů, druhy prací, průběh stavu tachometru a servisy, které stavy zapsaly. Majitel může tento souhrn pro své vozidlo vypnout.</li>
+<li>b) <strong>Majitel vozidla</strong> po zadání přístupového kódu nebo naskenování QR kódu vidí celou historii včetně cen a příloh, bez samostatných kontaktních polí. Osobní údaje mohou být přímo v přílohách.</li>
+<li>c) <strong>Kupující</strong>, který zadá VIN a datum první registrace vozidla, vidí souhrn: počet Záznamů, druhy prací, průběh stavu tachometru a servisy, které stavy zapsaly. U vozidla bez uloženého data první registrace se souhrn ověřuje podle VIN a stavu tachometru. Majitel může tento souhrn pro své vozidlo vypnout.</li>
 <li>d) <strong>Kupující s odkazem pro kupující</strong> od majitele (nebo QR z prodejní karty) vidí Záznamy, práce, stavy tachometru, stav baterie a servis, který Záznam zapsal; ceny, přílohy, poznámky a kontakty ne.</li>
 </ul>
 <p>2.3. Provozovatel Záznamy <strong>neověřuje</strong>. Upozornění, že zapsané stavy tachometru na sebe nenavazují, je automatický výpočet z údajů Servisů, ne tvrzení Provozovatele o stočení tachometru nebo o jednání kohokoli.</p>
@@ -76,7 +76,7 @@
 <p>3.1. Servis se registruje svým IČO. Provozovatel ověřuje údaje v registru ARES a může Servis bez ověření označit jako neověřený nebo jeho registraci odmítnout.</p>
 <p>3.2. Servis může zřídit účty pro své zaměstnance. Za jednání osob, které účty Servisu používají, odpovídá Servis jako za své vlastní.</p>
 <p>3.3. Servis chrání přihlašovací údaje a bez zbytečného odkladu oznámí Provozovateli jejich zneužití.</p>
-<p>3.4. <strong>Seznam servisů.</strong> Provozovatel zveřejňuje ověřené a aktivní Servisy na veřejné stránce „Autoservisy s Vozopisem“ v rozsahu název, adresa, obec, PSČ, kraj, telefon, IČO a rok zapojení, aby je majitelé vozidel našli. Servis se ze seznamu může kdykoli odebrat v nastavení na stránce Tým. Provozovatel v seznamu nezveřejňuje počet zápisů ani hodnocení Servisů.</p>
+<p>3.4. <strong>Seznam servisů.</strong> Provozovatel zveřejňuje ověřené a aktivní Servisy na veřejné stránce „Autoservisy s Vozopisem“ v rozsahu název, adresa, obec, PSČ, kraj, telefon a rok zapojení, a to i ve veřejném datovém rozhraní JSON, aby je majitelé vozidel našli. Servis se ze seznamu může kdykoli odebrat v nastavení na stránce Tým. Provozovatel v seznamu nezveřejňuje počet zápisů ani hodnocení Servisů.</p>
 <h2>4. Povinnosti Servisu při zápisu</h2>
 <p>4.1. Servis zapisuje <strong>jen práci, kterou skutečně provedl</strong>, a údaje <strong>pravdivě a úplně</strong>, zejména datum a stav tachometru odečtený z vozidla.</p>
 <p>4.2. Chybný Záznam Servis nesmaže, ale <strong>zruší s uvedením důvodu</strong> a zapíše správné údaje jako nový Záznam. Zrušený Záznam zůstává v historii viditelně označený.</p>
@@ -248,7 +248,7 @@
 </tr>
 <tr>
 <td>[poskytovatel e-mailu]</td>
-<td>odesílání e-mailů (obnova hesla)</td>
+<td>odesílání e-mailů (obnova hesla, oznámení o registraci a kopie zpráv z formulářů)</td>
 <td>[EU – doplnit]</td>
 </tr>
 </tbody>
@@ -262,15 +262,14 @@
 <p><strong>Vozopis – elektronická servisní kniha</strong></p>
 <p>Provedené práce na vašem voze zapisujeme do elektronické servisní knihy Vozopis: VIN, údaje o voze, datum, stav tachometru a co jsme dělali. Historie zůstává u vozu i pro další majitele a pomáhá při prodeji dokázat, že auto bylo udržované.</p>
 <ul>
-<li><strong>Vy</strong> (s kódem nebo QR z karty) vidíte celou historii včetně cen a faktur.</li>
-<li><strong>Kupující</strong> s VIN a datem první registrace z techničáku vidí jen souhrn: počet záznamů, druhy prací a průběh kilometrů. Tento pohled můžete na stránce historie sami vypnout.</li>
+<li><strong>Vy</strong> (s kódem nebo QR z karty) vidíte celou historii včetně cen a faktur. Faktura může obsahovat údaje dřívějšího zákazníka.</li>
+<li><strong>Kupující</strong> s VIN a datem první registrace z techničáku vidí jen souhrn: počet záznamů, druhy prací a průběh kilometrů. U vozidla bez uloženého data první registrace se souhrn ověřuje podle VIN a stavu tachometru. Tento pohled můžete na stránce historie sami vypnout.</li>
 <li><strong>Kupující s odkazem od vás</strong> (odkaz pro kupující nebo QR z prodejní karty) vidí záznamy, práce, kilometry a stav baterie, bez cen, faktur a poznámek.</li>
 <li><strong>Jiné servisy</strong> vidí technickou historii, ne vaše jméno, telefon ani ceny.</li>
 </ul>
 <p>Vaše jméno a kontakt používáme jen my, kvůli zakázce a připomínce příštího servisu. Na požádání je smažeme.</p>
 <p>Správci údajů: [název servisu] a provozovatel Vozopisu Roman Žydyk, IČO 09680357. Kontakt pro vaše práva: romanzdk@gmail.com. Podrobnosti: [adresa webu]/ochrana-udaju/. Stížnost můžete podat u Úřadu pro ochranu osobních údajů (uoou.gov.cz).</p>
 </blockquote></section>
-
 </main>
 <footer>
   <div class="wrap">
