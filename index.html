@@ -476,9 +476,7 @@
   calc();
 </script>
 <script>
-  // Until the Vozopis app runs on a public address, the list is a static file here; then point this to
-  // https://<adresa aplikace>/autoservisy.json (same format, CORS allowed).
-  const DIR_URL = "assets/autoservisy.json";
+  const DIR_URL = "https://app.vozopis.cz/autoservisy.json";
   const norm = s => (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, "");
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
   function renderDirectory(all) {

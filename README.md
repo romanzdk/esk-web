@@ -17,7 +17,7 @@ Všechna práva vyhrazena, žádné další použití bez písemného souhlasu. 
 
 ## Seznam servisů
 
-Sekce „Najít servis“ načítá `assets/autoservisy.json` (teď prázdný seznam). Až aplikace Vozopis poběží na veřejné adrese, změňte v `index.html` konstantu `DIR_URL` na `https://<adresa aplikace>/autoservisy.json` – aplikace vrací stejný formát a povoluje načtení z jiné domény.
+Sekce „Najít servis“ načítá živý seznam z ostré aplikace: `https://app.vozopis.cz/autoservisy.json` (konstanta `DIR_URL` v `index.html`). Dokud je seznam prázdný, sekce i odkazy na ni jsou skryté. Objeví se samy s prvním servisem, který souhlasí se zveřejněním.
 
 ## Podmínky a ochrana údajů
 
