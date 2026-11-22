@@ -158,7 +158,7 @@
       <div class="node"><svg aria-hidden="true"><use href="#i-car"/></svg><b>Majitel auta</b><span>přijede do servisu</span></div>
       <div class="arrow">platí za zápis<i></i><small>položka na faktuře</small></div>
       <div class="node"><svg aria-hidden="true"><use href="#i-wrench"/></svg><b>Servis</b><span>opraví a zapíše</span></div>
-      <div class="arrow">platí licenci<i></i><small>2 měsíce zdarma</small></div>
+      <div class="arrow">platí 69&nbsp;Kč za zápis<i></i><small>2 měsíce zdarma</small></div>
       <div class="node esk"><svg aria-hidden="true"><use href="#i-book"/></svg><b>Vozopis</b><span>uloží historii natrvalo</span></div>
     </div>
     <div class="flow-back">
@@ -180,7 +180,7 @@
     <div class="split">
       <div>
         <p class="eyebrow">Pro servisy</p>
-        <h2 id="ws-title">Licence se zaplatí ze zápisů</h2>
+        <h2 id="ws-title">Vozopis se zaplatí ze zápisů</h2>
         <p class="lead">Za zápis do Vozopisu si účtujete jako za každou jinou práci. Zákazník ví, za co platí: jeho auto bude mít historii, kterou při prodeji ukáže.</p>
         <ul class="ticks">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Žádný program ani instalace</b><span>Běží v&nbsp;prohlížeči. Stačí telefon, tablet nebo starý počítač v&nbsp;dílně.</span></div></li>
@@ -192,19 +192,20 @@
         <p class="muted">Spočítejte si to</p>
         <h3 id="calc-title">Kolik vám zápisy vydělají</h3>
         <div class="range">
-          <label for="price">Cena za jeden zápis <output id="price-out" for="price">190 Kč</output></label>
-          <input id="price" type="range" min="50" max="500" step="10" value="190">
+          <label for="price">Cena za jeden zápis <output id="price-out" for="price">200 Kč</output></label>
+          <input id="price" type="range" min="100" max="500" step="10" value="200">
         </div>
         <div class="range">
-          <label for="count">Zápisů za měsíc <output id="count-out" for="count">80</output></label>
-          <input id="count" type="range" min="5" max="300" step="5" value="80">
+          <label for="count">Zápisů za měsíc <output id="count-out" for="count">50</output></label>
+          <input id="count" type="range" min="5" max="300" step="5" value="50">
         </div>
         <div class="result" aria-live="polite">
-          <div><span>Za měsíc</span><b id="month">15 200 Kč</b></div>
-          <div><span>Za rok</span><b id="year">182 400 Kč</b></div>
+          <div><span>Od zákazníků za měsíc</span><b id="month">10 000 Kč</b></div>
+          <div><span>Vozopis (69&nbsp;Kč za zápis)</span><b id="fee">3 450 Kč</b></div>
+          <div><span>Vám zůstane</span><b id="net">6 550 Kč</b></div>
         </div>
-        <p class="calc-time" id="time">A&nbsp;to za zhruba 1&nbsp;h 20&nbsp;min práce měsíčně – zápis zabere asi minutu.</p>
-        <p class="muted" style="margin:1rem 0 0">Jen příklad. Cenu zápisu určujete vy. Licenci máte první 2 měsíce zdarma.</p>
+        <p class="calc-time" id="time">A&nbsp;to za zhruba 50&nbsp;min práce měsíčně – zápis zabere asi minutu.</p>
+        <p class="muted" style="margin:1rem 0 0">Jen příklad. Cenu zápisu určujete vy. První 2 měsíce je Vozopis zdarma.</p>
       </form>
     </div>
 
@@ -333,20 +334,20 @@
   <div class="wrap">
     <div class="section-head center">
       <p class="eyebrow">Ceník</p>
-      <h2 id="price-title">Licenci platí servis. Historie je pro všechny.</h2>
-      <p class="lead" style="margin-inline:auto">Servis platí licenci podle toho, kolik zapisuje. Malý servis neplatí jako velký. Zápis si účtuje zákazníkovi. Prohlížení historie a ověření kilometrů je zdarma.</p>
+      <h2 id="price-title">Servis platí za zápis. Historie je pro všechny.</h2>
+      <p class="lead" style="margin-inline:auto">Servis platí jen za zápisy, které udělá. Malý servis tak neplatí jako velký. Zápis si účtuje zákazníkovi. Prohlížení historie a ověření kilometrů je zdarma.</p>
     </div>
     <div class="prices">
       <article class="price main">
         <span class="tag">První 2 měsíce zdarma</span>
         <p class="who">Autoservis</p>
-        <h3>Licence Vozopis</h3>
-        <p class="amount">Na vyžádání</p>
-        <p class="per">Cena podle počtu zápisů za měsíc. Platíte měsíčně, nebo ročně. Cenu vám pošleme.</p>
+        <h3>Vozopis pro servis</h3>
+        <p class="amount">69&nbsp;Kč za zápis</p>
+        <p class="per">Žádný paušál, tarif ani minimum. Nejsme plátci DPH, cena je konečná. Fakturu posíláme jednou za měsíc.</p>
         <dl class="tiers">
-          <div><dt>Malý</dt><dd>do 30 zápisů měsíčně</dd></div>
-          <div><dt>Střední</dt><dd>do 150 zápisů měsíčně</dd></div>
-          <div><dt>Velký</dt><dd>bez omezení</dd></div>
+          <div><dt>10 zápisů</dt><dd>690 Kč za měsíc</dd></div>
+          <div><dt>50 zápisů</dt><dd>3&nbsp;450 Kč za měsíc</dd></div>
+          <div><dt>150 zápisů</dt><dd>10&nbsp;350 Kč za měsíc</dd></div>
         </dl>
         <ul>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zápisy servisu k VIN</li>
@@ -355,7 +356,7 @@
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tisk karet s&nbsp;QR kódem</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Export zápisů do Excelu</li>
         </ul>
-        <a class="btn btn-primary" href="#kontakt">Chci cenovou nabídku</a>
+        <a class="btn btn-primary" href="#kontakt">Chci Vozopis vyzkoušet</a>
       </article>
       <article class="price">
         <p class="who">Majitel auta</p>
@@ -401,9 +402,9 @@
       <details><summary>Je stav kilometrů ve Vozopisu důkaz?</summary><p>Ne. Údaje zapisují servisy a Vozopis je neověřuje. Když hodnoty nenavazují, může jít o&nbsp;chybu při zápisu, výměnu přístroje i zásah do tachometru. Berte to jako důvod se zeptat, ne jako rozsudek.</p></details>
       <details><summary>Chci opravit nebo smazat své údaje. Jak?</summary><p>Napište servisu, který záznam zapsal, nebo nám. Chybný záznam servis zruší a zapíše správně. Jméno, telefon a přílohy smaže na požádání. Samotný záznam o&nbsp;servisu (datum, km, práce) zůstává, aby historie auta byla úplná.</p></details>
       <details><summary>Potřebuje servis nějaký program nebo nový počítač?</summary><p>Ne. Vozopis běží v&nbsp;prohlížeči na telefonu, tabletu i počítači. Nic se neinstaluje a nic se neaktualizuje.</p></details>
-      <details><summary>Kolik stojí licence pro servis?</summary><p>Podle toho, kolik zapisujete: Malý tarif do 30 zápisů měsíčně, Střední do 150, Velký bez omezení. Malý servis tak neplatí jako velký. Licenci platíte měsíčně, nebo ročně, cenu vám pošleme na vyžádání. První 2 měsíce máte Vozopis zdarma, takže si ho v&nbsp;dílně vyzkoušíte bez rizika.</p></details>
-      <details><summary>Co když jeden měsíc zapíšu víc, než mám v&nbsp;tarifu?</summary><p>Nic se neděje, zápis nikdy neblokujeme. Tarif se řídí průměrem za poslední 3 měsíce, takže jarní nebo podzimní přezouvání vás nepřeřadí. Kolik jste zapsali, vidíte v&nbsp;aplikaci. Když průměr vydrží nad limitem 2 měsíce, nabídneme vyšší tarif.</p></details>
-      <details><summary>Kolik stojí zápis pro zákazníka?</summary><p>To určuje servis. Vozopis účtuje servisu jen licenci.</p></details>
+      <details><summary>Kolik stojí Vozopis pro servis?</summary><p>69&nbsp;Kč za každý zápis. Žádný paušál, tarif ani minimum: když měsíc nic nezapíšete, nic neplatíte. Nejsme plátci DPH, cena je konečná. První 2 měsíce máte Vozopis zdarma, takže si ho v&nbsp;dílně vyzkoušíte bez rizika.</p></details>
+      <details><summary>Jak se za Vozopis platí?</summary><p>Jednou za měsíc vám pošleme fakturu za zápisy z&nbsp;minulého měsíce. Zrušené zápisy se nepočítají. Kolik jste zapsali a kolik to dělá, vidíte průběžně v&nbsp;aplikaci.</p></details>
+      <details><summary>Kolik stojí zápis pro zákazníka?</summary><p>To určuje servis. Vozopis účtuje servisu 69&nbsp;Kč za zápis.</p></details>
       <details><summary>Můj servis do Vozopisu nezapisuje. Co s&nbsp;tím?</summary><p>Řekněte mu o&nbsp;Vozopisu, nebo mu <a href="mailto:?subject=Zapisujete%20do%20Vozopisu%3F&amp;body=Dobr%C3%BD%20den%2C%0A%0Acht%C4%9Bl%28a%29%20bych%20m%C3%ADt%20servisn%C3%AD%20historii%20sv%C3%A9ho%20auta%20v%20elektronick%C3%A9%20servisn%C3%AD%20knize%20Vozopis.%20Servis%20zap%C3%AD%C5%A1e%20opravu%20k%20VIN%20a%20j%C3%A1%20dostanu%20kartu%20s%20QR%20k%C3%B3dem.%20Hod%C3%AD%20se%20mi%20to%20i%20p%C5%99i%20prodeji%20auta.%0A%0APro%20servis%20je%20Vozopis%20prvn%C3%AD%202%20m%C4%9Bs%C3%ADce%20zdarma%3A%20https%3A%2F%2Fvozopis.cz%2F%23servisy%0A%0AD%C4%9Bkuji">pošlete připravený e-mail</a>. Servisy nejvíc přesvědčí, když se ptají sami zákazníci. Pro servis je Vozopis první 2 měsíce zdarma.</p></details>
       <details><summary>Kdy to spustíte?</summary><p>Aplikace je hotová a teď hledáme první servisy, které ji vyzkouší v&nbsp;provozu. Vyzkoušet si ji můžete hned v&nbsp;<a href="https://app.eservisnikniha.cz/prihlaseni/">ukázkové verzi</a> – bez registrace, s&nbsp;vymyšlenými auty, nic se neuloží. Ozvěte se a ukážeme vám ji.</p></details>
     </div>
@@ -461,7 +462,8 @@
     document.getElementById("price-out").textContent = kc(p);
     document.getElementById("count-out").textContent = c;
     document.getElementById("month").textContent = kc(p * c);
-    document.getElementById("year").textContent = kc(p * c * 12);
+    document.getElementById("fee").textContent = kc(69 * c);
+    document.getElementById("net").textContent = kc((p - 69) * c);
     // one entry takes about a minute
     const h = Math.floor(c / 60), m = c % 60;
     const t = (h ? h + "\u00a0h" : "") + (h && m ? " " : "") + (m ? m + "\u00a0min" : "");
