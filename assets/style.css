@@ -99,6 +99,7 @@ p { margin: 0 0 1em; }
 .hero .wrap { display: grid; grid-template-columns: 1.02fr 1fr; gap: 3rem; align-items: center; padding: clamp(3rem, 7vw, 6rem) 0 clamp(3.5rem, 7vw, 6rem); }
 .hero h1 { color: #fff; }
 .hero h1 em { font-style: normal; color: var(--amber-on-dark); }
+.hero-kw { margin: 0 0 .8rem; font-size: 1.15rem; color: #fff; max-width: 40em; }
 .hero .eyebrow { color: var(--amber-on-dark); }
 .hero .lead { color: #c3ccda; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0 1.8rem; }
