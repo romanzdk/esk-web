@@ -90,6 +90,9 @@ p { margin: 0 0 1em; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 1em .8em; }
 }
+@media (max-width: 1320px) and (min-width: 941px) { .brand-name { display: none; } }
+@media (min-width: 941px) { .nav a { white-space: nowrap; } }
+@media (max-width: 1100px) and (min-width: 941px) { .nav a:not(.btn) { padding: .7em .5em; } .nav .btn { padding: 0 .8em; } }
 @media (max-width: 560px) { .brand-name { display: none; } }
 @media (max-width: 420px) { .nav .btn { padding: 0 .9em; } }
 
