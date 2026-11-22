@@ -1,6 +1,6 @@
 # ESK – promo web
 
-Prezentační web služby **Elektronická servisní kniha (ESK)**. Jedna statická stránka bez build kroku, hostovaná na GitHub Pages.
+Prezentační web služby **Elektronická servisní kniha (ESK)**. Jedna statická stránka bez build kroku, hostovaná na GitHub Pages na doméně <https://eservisnikniha.cz> (soubor `CNAME`). DNS u Forpsi: A záznamy domény na 185.199.108.153, .109.153, .110.153, .111.153 a `www` jako CNAME na `romanzdk.github.io`.
 
 - `index.html` – celý obsah stránky
 - `assets/style.css` – vzhled
