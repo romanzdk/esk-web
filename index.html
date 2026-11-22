@@ -56,7 +56,7 @@
       <a href="#servisy">Pro servisy</a>
       <a href="#majitele">Pro majitele</a>
       <a href="#kupujici">Pro kupující</a>
-      <a href="#najit-servis">Najít servis</a>
+      <a href="#najit-servis" class="needs-dir" hidden>Najít servis</a>
       <a href="#cenik">Ceník</a>
       <a href="#faq">Otázky</a>
       <a class="btn btn-primary" href="#kontakt">Chci ESK do servisu</a>
@@ -75,7 +75,7 @@
       <div class="hero-cta">
         <a class="btn btn-primary" href="#servisy"><svg aria-hidden="true"><use href="#i-wrench"/></svg>Jsem servis</a>
         <a class="btn btn-ghost" href="#majitele"><svg aria-hidden="true"><use href="#i-car"/></svg>Mám auto</a>
-        <a class="btn btn-ghost" href="#najit-servis"><svg aria-hidden="true"><use href="#i-search"/></svg>Seznam servisů</a>
+        <a class="btn btn-ghost needs-dir" href="#najit-servis" hidden><svg aria-hidden="true"><use href="#i-search"/></svg>Seznam servisů</a>
       </div>
       <ul class="checks">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Zapisují jen servisy s ověřeným IČO</li>
@@ -229,7 +229,7 @@
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Odkaz pro kupujícího</b><span>Při prodeji pošlete odkaz. Kupující uvidí každý servis, kilometry i ceny.</span></div></li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Po prodeji nový kód</b><span>Servis vytvoří nový kód a starý odkaz přestane platit. Historie jde s&nbsp;autem.</span></div></li>
       </ul>
-      <p style="margin-top:1.4rem"><a href="#najit-servis"><b>Najít servis s&nbsp;ESK v&nbsp;seznamu →</b></a></p>
+      <p style="margin-top:1.4rem" class="needs-dir" hidden><a href="#najit-servis"><b>Najít servis s&nbsp;ESK v&nbsp;seznamu →</b></a></p>
       <div class="recommend">
         <p><b>Váš servis do ESK ještě nezapisuje?</b> Pošlete mu krátký e-mail. Text je připravený, stačí doplnit adresu servisu.</p>
         <a class="btn btn-dark" href="mailto:?subject=Zapisujete%20do%20ESK%3F&amp;body=Dobr%C3%BD%20den%2C%0A%0Acht%C4%9Bl%28a%29%20bych%20m%C3%ADt%20servisn%C3%AD%20historii%20sv%C3%A9ho%20auta%20v%20elektronick%C3%A9%20servisn%C3%AD%20knize%20ESK.%20Servis%20zap%C3%AD%C5%A1e%20opravu%20k%20VIN%20a%20j%C3%A1%20dostanu%20kartu%20s%20QR%20k%C3%B3dem.%20Hod%C3%AD%20se%20mi%20to%20i%20p%C5%99i%20prodeji%20auta.%0A%0APro%20servis%20je%20ESK%20prvn%C3%AD%203%20m%C4%9Bs%C3%ADce%20zdarma%3A%20https%3A//romanzdk.github.io/esk-web/%23servisy%0A%0AD%C4%9Bkuji"><svg aria-hidden="true"><use href="#i-mail"/></svg>Doporučit ESK servisu</a>
@@ -257,7 +257,7 @@
   </div>
 </section>
 
-<section id="najit-servis" aria-labelledby="find-title">
+<section id="najit-servis" class="needs-dir" aria-labelledby="find-title" hidden>
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Najít servis</p>
@@ -429,7 +429,7 @@
       <a href="#servisy">Pro servisy</a>
       <a href="#majitele">Pro majitele</a>
       <a href="#kupujici">Pro kupující</a>
-      <a href="#najit-servis">Najít servis</a>
+      <a href="#najit-servis" class="needs-dir" hidden>Najít servis</a>
       <a href="#cenik">Ceník</a>
       <a href="#faq">Otázky</a>
       <a href="podminky.html">Podmínky</a>
@@ -486,6 +486,8 @@
     document.getElementById("dir-empty-title").textContent = all.length ? "Nic jsme nenašli." : "Zapojují se první servisy.";
   }
   fetch(DIR_URL).then(r => r.json()).catch(() => []).then(all => {
+    // An empty list says "nobody uses this"; the section and every link to it appear with the first workshop.
+    if (all.length) document.querySelectorAll(".needs-dir").forEach(e => { e.hidden = false; });
     document.getElementById("dir-q").addEventListener("input", () => renderDirectory(all));
     renderDirectory(all);
   });

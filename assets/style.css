@@ -344,3 +344,4 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
 .doc blockquote { margin: 1rem 0; padding: .8rem 1.1rem; border-left: 4px solid var(--line); background: var(--card); }
 .doc-note { padding: .9rem 1.1rem; border-left: 6px solid var(--amber); background: var(--card); margin-bottom: 1.2rem; }
 .doc section h1 { font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin: .8rem 0 1rem; }
+[hidden] { display: none !important; } /* .btn etc. set display and would override the attribute */
