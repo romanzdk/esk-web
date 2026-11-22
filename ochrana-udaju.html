@@ -26,27 +26,29 @@
 <ul>
   <li>Nepoužívá cookies, měření návštěvnosti ani reklamu. Písma načítá z&nbsp;vlastního serveru, ne od Googlu.</li>
   <li>Web běží na službě GitHub Pages (GitHub, Inc.). Ta při každé návštěvě zpracovává vaši IP adresu kvůli provozu a bezpečnosti, podle <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">zásad GitHubu</a>.</li>
-  <li>Seznam autoservisů zobrazuje jen servisy, které o to samy požádaly: název, adresu, PSČ, kraj, případný telefon a rok zapojení. Servis může ulici skrýt, pak ukážeme jen obec. Aplikace je zveřejňuje i jako veřejná data (JSON). Servis svou volbu může kdykoli změnit.</li>
+  <li>Před zveřejněním ověřujeme, že držitel účtu smí za servis jednat, například kódem do datové schránky. Seznam autoservisů zobrazuje jen servisy, které o to samy požádaly: název, adresu, PSČ, kraj, případný telefon a rok zapojení. Servis může ulici skrýt, pak ukážeme jen obec. Aplikace je zveřejňuje i jako veřejná data (JSON). Servis svou volbu může kdykoli změnit. Po vypnutí může prohlížeč nebo jiná služba dál používat dříve načtený seznam z mezipaměti až jednu hodinu. Změna se nepromítne do kopií, které si ostatní sami pořídili.</li>
+  <li>Při otevření stránky se seznam načítá z&nbsp;app.vozopis.cz. Do kontaktního formuláře běžné aplikace vede také odkaz z&nbsp;ukázkové verze. Při odeslání formuláře aplikace převezme zprávu, kontakt a případně jméno a název servisu. IP adresu při odeslání používá k&nbsp;omezení počtu zpráv. Provozovatel dostane e-mailem upozornění s odkazem do administrace, bez textu zprávy. Zprávu smažeme 12 měsíců po vyřízení.</li>
   <li>Když nám napíšete e-mail, použijeme vaši adresu a zprávu jen k&nbsp;odpovědi a k&nbsp;případné domluvě o&nbsp;spolupráci. Smažeme je, až nebudou potřeba.</li>
 </ul>
 
 <h2>Služba Vozopis (aplikace)</h2>
-<p>V aplikaci zapisují autoservisy servisní historii vozidel. Zpracováváme:</p>
+<p>Za vložení a uchování technického záznamu v historii vozidla odpovídáme společně s dílnou, která ho zapsala. O tom, co vidí majitel s kartou, kupující s odkazem či podle VIN a jiné servisy, rozhodujeme jako samostatný správce. Za soukromé údaje zakázky odpovídá zapisující servis. My je pro něj zpracováváme podle jeho pokynů.</p>
+<p>V aplikaci zpracováváme tyto údaje:</p>
 <ul>
   <li>údaje o vozidle: VIN, SPZ, značka, model, rok výroby, datum první registrace,</li>
   <li>servisní záznamy: datum, stav tachometru, provedené práce, cena, příští servis, odložené práce, stav baterie u&nbsp;elektroaut a hybridů,</li>
   <li>kontakt na zákazníka (jméno, telefon, e-mail) a přílohy – jen pokud je servis zadá,</li>
   <li>záznamy o přístupu: kdo a kdy historii otevřel nebo hledal – mažeme je po roce, IP adresy v&nbsp;nich po 30 dnech,</li>
-  <li>zprávy z formuláře Napište nám: jméno, kontakt a text, odkud byly odeslány (název stránky), u přihlášených i účet a servis – zprávu ukládáme kvůli odpovědi a zlepšení služby, provozovatel dostane e-mailem jen upozornění bez obsahu; zprávu smažeme 12 měsíců po vyřízení.</li>
+  <li>zprávy z formuláře Napište nám: jméno, kontakt a text, odkud byly odeslány (název stránky), u přihlášených i účet a servis – zprávu ukládáme kvůli odpovědi a zlepšení služby, provozovateli přijde e-mailem odkaz do administrace bez textu zprávy. Zprávu smažeme 12 měsíců po vyřízení.</li>
 </ul>
 <p>Technické údaje o vozidle (značka, model, datum první registrace, palivo, motor, platnost STK) může servis načíst podle VIN z&nbsp;veřejného rozhraní Registru silničních vozidel Ministerstva dopravy. Údaje o majitelích registr neposkytuje.</p>
 <h3>Účely, právní základy a doby uložení</h3>
 <table>
   <thead><tr><th>Účel</th><th>Právní základ</th><th>Jak dlouho</th></tr></thead>
   <tbody>
-    <tr><td>Servisní historie vozidla pro majitele, servisy a kupující, ochrana před stočeným tachometrem</td><td>oprávněný zájem (čl. 6 odst. 1 písm. f GDPR), správci jsme společně se servisy</td><td>dokud je historie potřeba pro návaznost oprav; po doložené likvidaci vozidla smažeme</td></tr>
+    <tr><td>Servisní historie vozidla pro majitele, servisy a kupující, ochrana před stočeným tachometrem</td><td>oprávněný zájem majitelů, kupujících a servisů na věrohodné historii a návaznosti oprav (čl. 6 odst. 1 písm. f GDPR)</td><td>dokud je historie potřeba pro návaznost oprav; po doložené likvidaci vozidla smažeme</td></tr>
     <tr><td>Zakázka servisu: kontakt na zákazníka, cena, poznámky, přílohy, připomínky</td><td>určuje autoservis jako správce, my jsme jeho zpracovatel</td><td>dokud je servis nesmaže, nejdéle 180 dní po konci jeho smlouvy</td></tr>
-    <tr><td>Účty servisů a fakturace</td><td>plnění smlouvy, u&nbsp;faktur právní povinnost</td><td>po dobu účtu, faktury podle účetních předpisů</td></tr>
+    <tr><td>Účty servisů a fakturace</td><td>u podnikající fyzické osoby plnění smlouvy, u zástupců a zaměstnanců dílny oprávněný zájem na správě účtů a komunikaci s dílnou. Údaje vyžadované na fakturách uchováváme ze zákona</td><td>po dobu účtu, faktury podle účetních předpisů</td></tr>
     <tr><td>Bezpečnost: kdo a kdy historii otevřel nebo hledal</td><td>oprávněný zájem na odhalení zneužití</td><td>1 rok, IP adresy 30 dní</td></tr>
     <tr><td>Zprávy z&nbsp;formulářů a podpora</td><td>oprávněný zájem odpovědět, u&nbsp;zájemce o&nbsp;službu jednání o&nbsp;smlouvě</td><td>12 měsíců po vyřízení</td></tr>
     <tr><td>Seznam autoservisů</td><td>volba servisu při registraci nebo v&nbsp;nastavení</td><td>dokud ji servis nezruší</td></tr>
@@ -54,17 +56,20 @@
 </table>
 <h3>Kdo co vidí</h3>
 <ul>
-  <li><b>Majitel</b> (přístupový kód nebo QR kód): celou technickou historii – data, kilometry, práce a servisy. Ceny, faktury, poznámky a kontakty ne, ty má jen servis, který zakázku zapsal. Ztracený kód vám po kontrole techničáku a občanky vymění kterýkoli zapojený servis.</li>
+  <li><b>Majitel</b> (přístupový kód nebo QR kód): celou technickou historii – data, kilometry, práce a servisy. Ceny, faktury, poznámky a kontakty ne, ty má jen servis, který zakázku zapsal. Odložené práce a jejich termín vidí jen servis, který je zapsal. Nový kód vám po kontrole techničáku a občanky vydá oprávněný servis. Vydáním nového kódu se při prodeji i ztrátě karty vypne také ověření podle VIN.</li>
   <li><b>Kupující</b>, který zná VIN a datum první registrace: počet záznamů, druhy prací, průběh kilometrů a který servis je zapsal – jen pokud majitel ověření podle VIN sám zapnul (výchozí stav je vypnuto) a jen u&nbsp;aut s&nbsp;uloženým datem první registrace. Majitel ho může kdykoli zase vypnout.</li>
-  <li><b>Kupující s&nbsp;odkazem od majitele</b> (odkaz pro kupující nebo QR z&nbsp;prodejní karty): všechny záznamy, práce, kilometry a stav baterie, bez cen, faktur, poznámek a kontaktů. Odkaz platí, dokud ho majitel nevymění za nový, do data, které si majitel může nastavit (třeba konec inzerátu), nebo dokud servis při prodeji auta nevytvoří nový přístupový kód.</li>
+  <li><b>Kupující s&nbsp;odkazem od majitele</b> (odkaz pro kupující nebo QR z&nbsp;prodejní karty): všechny záznamy, práce, kilometry a stav baterie, bez cen, faktur, poznámek a kontaktů. Odkaz platí, dokud ho majitel nevymění za nový, do data, které si majitel může nastavit (třeba konec inzerátu), nebo dokud servis nevytvoří nový přístupový kód.</li>
   <li><b>Autoservisy</b>: technickou historii vozidla jen ke konkrétní zakázce (30 dní od potvrzení, že je auto u&nbsp;nich, nebo od jejich zápisu), a&nbsp;jen ověřené servisy. Ceny, přílohy, poznámky a kontakty jen u&nbsp;záznamů, které samy zapsaly.</li>
 </ul>
 <p>Údaje zapisují autoservisy, provozovatel je neověřuje. Historie je vodítko, ne úřední doklad. Výpis obsahuje záznamy zapojených autoservisů. Pokud záznam chybí, oprava přesto mohla proběhnout. Chybný záznam servis zruší a zapíše správně. Výmaz záznamu není vyloučený, každou žádost posoudíme. Kontakty na zákazníky a přílohy servis smaže na požádání.</p>
 
+<p>Server, databázi a přílohy spravuje poskytovatel hostingu. Poskytovatel doručování e-mailů zpracovává adresy příjemců a obsah provozních e-mailů, například při obnově hesla a registraci servisu. Poskytovatel schránky provozovatele zpracovává doručená oznámení a e-maily, které nám napíšete přímo, včetně jejich obsahu.</p>
+<p>Úloha pro výmaz starých záznamů o přístupu, jejich IP adres a vyřízených zpráv je naplánovaná každou hodinu. Po skončení smlouvy vyřizuje vrácení a výmaz soukromých údajů zakázky provozovatel samostatně. Nejpozději do 180 dnů je smaže, i když si servis vyžádal jejich vrácení, s výjimkou údajů, které zákon vyžaduje uchovat. Podle podmínek uchováváme případné zálohy nejvýše 30 dnů a po obnově výmaz zopakujeme.</p>
+
 <h2>Vaše práva</h2>
 <ul>
   <li><b>Námitka.</b> Proti zpracování na základě oprávněného zájmu (servisní historie, bezpečnostní záznamy) můžete kdykoli vznést námitku. Zpracování pak ukončíme, pokud neprokážeme závažné důvody, které převažují nad vašimi zájmy.</li>
-  <li>Přístup, oprava, výmaz a omezení zpracování; u&nbsp;údajů, které jste nám dali kvůli smlouvě (účet servisu), i přenositelnost. Napište na <a href="mailto:romanzdk@gmail.com">romanzdk@gmail.com</a>, nepotřebujete k&nbsp;tomu kartu ani kód. Odpovíme do jednoho měsíce. Ve složitých případech můžeme lhůtu prodloužit nejvýš o&nbsp;dva měsíce, o&nbsp;prodloužení a důvodu vám dáme vědět už v&nbsp;prvním měsíci.</li>
+  <li>Přístup, oprava, výmaz a omezení zpracování; u&nbsp;údajů, které jste nám dali kvůli smlouvě (účet servisu), i přenositelnost. Žádost můžete podat zapisujícímu servisu nebo nám na <a href="mailto:romanzdk@gmail.com">romanzdk@gmail.com</a>, také bez karty nebo kódu. Odpovíme do jednoho měsíce. Ve složitých případech můžeme lhůtu prodloužit nejvýš o&nbsp;dva měsíce, o&nbsp;prodloužení a důvodu vám dáme vědět už v&nbsp;prvním měsíci.</li>
   <li>Chybný nebo sporný záznam – napište nám VIN, datum záznamu a co je špatně, nikdy přístupový kód. Nahlásit může i bývalý majitel. Po dobu ověřování sporný záznam skryjeme z&nbsp;výpisů pro majitele, kupující a jiné servisy.</li>
   <li>Ověření podle VIN je vypnuté, dokud ho majitel sám nezapne. Zapíná a vypíná ho na stránce historie svého auta.</li>
   <li>Podat stížnost u&nbsp;Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz">uoou.gov.cz</a>).</li>
