@@ -215,6 +215,7 @@ input[type=range]::-moz-range-thumb { width: 26px; height: 26px; border-radius: 
 .result div { background: rgb(255 255 255 / .06); border: 1px solid rgb(255 255 255 / .1); border-radius: 4px; padding: 1rem; }
 .result span { display: block; font-size: .85rem; color: #9fabbe; }
 .result b { font: 700 clamp(1.5rem, 3vw, 2rem)/1.15 var(--head); color: #fff; }
+.result div:last-child { grid-column: 1 / -1; }
 .result div:last-child b { color: var(--amber); }
 
 /* features */
