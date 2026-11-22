@@ -34,7 +34,7 @@
 <p>V aplikaci zapisují autoservisy servisní historii vozidel. Zpracováváme:</p>
 <ul>
   <li>údaje o vozidle: VIN, SPZ, značka, model, rok výroby, datum první registrace,</li>
-  <li>servisní záznamy: datum, stav tachometru, provedené práce, cena, příští servis,</li>
+  <li>servisní záznamy: datum, stav tachometru, provedené práce, cena, příští servis, odložené práce, stav baterie u&nbsp;elektroaut a hybridů,</li>
   <li>kontakt na zákazníka (jméno, telefon, e-mail) a přílohy – jen pokud je servis zadá,</li>
   <li>záznamy o přístupu včetně IP adres – mažeme je po 1 roce.</li>
 </ul>
@@ -43,6 +43,7 @@
 <ul>
   <li><b>Majitel</b> (přístupový kód nebo QR kód): celou historii včetně cen a příloh, bez kontaktů na zákazníky.</li>
   <li><b>Kupující</b> (VIN a datum první registrace z&nbsp;techničáku): počet záznamů, druhy prací, průběh kilometrů a který servis je zapsal. Majitel může tento pohled vypnout.</li>
+  <li><b>Kupující s&nbsp;odkazem od majitele</b> (odkaz pro kupující nebo QR z&nbsp;prodejní karty): všechny záznamy, práce, kilometry a stav baterie, bez cen, faktur, poznámek a kontaktů.</li>
   <li><b>Autoservisy</b>: technickou historii vozidla. Ceny, přílohy a kontakty jen u&nbsp;záznamů, které samy zapsaly.</li>
 </ul>
 <p>Údaje zapisují autoservisy, provozovatel je neověřuje. Historie je vodítko, ne úřední doklad. Servisní záznamy se nemažou, chybné se zruší a zůstanou přeškrtnuté. Kontakty na zákazníky a přílohy servis na požádání smaže.</p>
