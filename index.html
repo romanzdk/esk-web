@@ -185,13 +185,16 @@
       <span class="brand-mark">Vozopis</span><span class="brand-name">Elektronická servisní kniha</span>
     </a>
     <nav class="nav" aria-label="Hlavní menu">
-      <a href="#servisy">Pro servisy</a>
-      <a href="#majitele">Pro majitele</a>
-      <a href="#kupujici">Pro kupující</a>
-      <a href="#najit-servis" class="needs-dir" hidden>Najít servis</a>
-      <a href="#cenik">Ceník</a>
-      <a href="#faq">Otázky</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#servisy">Pro servisy</a>
+        <a href="#majitele">Pro majitele</a>
+        <a href="#kupujici">Pro kupující</a>
+        <a href="#najit-servis" class="needs-dir" hidden>Najít servis</a>
+        <a href="#cenik">Ceník</a>
+        <a href="#faq">Otázky</a>
+      </div>
       <a class="btn btn-primary" href="#kontakt">Chci Vozopis do servisu</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
     </nav>
   </div>
 </header>
@@ -554,6 +557,19 @@
   </div>
 </section>
 
+<section id="provozovatel" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Provozovatel</p>
+      <h2 id="who-title">Kdo za Vozopisem stojí</h2>
+    </div>
+    <div class="who">
+      <p>Vozopis provozuje Roman Žydyk, IČO 09680357, č.&nbsp;p. 380, 257&nbsp;24 Chocerady. Na dotazy odpovídám osobně: <a href="mailto:romanzdk@gmail.com">romanzdk@gmail.com</a>.</p>
+      <p>Nemusíte mi věřit na slovo. <a href="https://demo.vozopis.cz/prihlaseni/">Ukázku aplikace</a> si můžete vyzkoušet sami, bez registrace.</p>
+    </div>
+  </div>
+</section>
+
 <section id="kontakt" style="padding-top:0" aria-labelledby="cta-title">
   <div class="wrap">
     <div class="cta">
@@ -596,6 +612,15 @@
   </div>
 </footer>
 
+<script>
+  (() => {
+    const t = document.querySelector(".nav-toggle"), l = document.getElementById("nav-links");
+    const close = () => { l.classList.remove("open"); t.setAttribute("aria-expanded", "false"); };
+    t.addEventListener("click", () => t.setAttribute("aria-expanded", l.classList.toggle("open")));
+    l.addEventListener("click", e => { if (e.target.closest("a")) close(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+  })();
+</script>
 <script>
   const kc = n => n.toLocaleString("cs-CZ") + " Kč";
   const price = document.getElementById("price"), count = document.getElementById("count");
