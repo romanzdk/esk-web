@@ -25,5 +25,5 @@ Sekce „Najít servis“ načítá živý seznam z ostré aplikace: `https://ap
 
 ## Kontaktní formulář
 
-Formulář v sekci Kontakt odesílá zprávy do aplikace Vozopis (`/api/kontakt/`, zprávy uvidíte v administraci). Dokud aplikace neběží veřejně, je skrytý a zobrazuje se tlačítko „Napsat e-mail“. Po nasazení nastavte v `index.html` u `<form id="contact-form">` atribut `data-endpoint="https://<adresa aplikace>/api/kontakt/"`.
+Formulář v sekci Kontakt odesílá zprávy do ostré aplikace (`https://app.vozopis.cz/api/kontakt/`, atribut `data-endpoint`). Zprávy jsou v administraci aplikace, provozovatel dostane e-mail s odkazem (bez obsahu zprávy). Když odeslání selže, formulář nabídne e-mail.
 
