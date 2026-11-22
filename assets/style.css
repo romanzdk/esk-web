@@ -351,4 +351,4 @@ footer a:hover { color: var(--ink); text-decoration: underline; }
 .contact-form .form-note { font-size: .9rem; color: #9fabbe; }
 .contact-form .form-note a { color: #fff; }
 .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-
+.calc-time { margin: .9rem 0 0; color: #dfe5ee; font-weight: 600; }
