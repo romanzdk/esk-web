@@ -14,3 +14,8 @@ Před spuštěním doplňte skutečný kontaktní e-mail místo `esk@example.com
 ## Licence
 
 Všechna práva vyhrazena, žádné další použití bez písemného souhlasu. Podrobnosti v [LICENSE](LICENSE). Repozitář je veřejný jen kvůli GitHub Pages.
+
+## Seznam servisů
+
+Sekce „Najít servis“ načítá `assets/autoservisy.json` (teď prázdný seznam). Až aplikace ESK poběží na veřejné adrese, změňte v `index.html` konstantu `DIR_URL` na `https://<adresa aplikace>/autoservisy.json` – aplikace vrací stejný formát a povoluje načtení z jiné domény.
+
