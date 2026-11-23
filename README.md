@@ -18,7 +18,7 @@ Všechna práva vyhrazena, žádné další použití bez písemného souhlasu. 
 
 ## Seznam servisů
 
-Sekce „Najít servis“ načítá živý seznam z ostré aplikace: `https://app.vozopis.cz/autoservisy.json` (konstanta `DIR_URL` v `index.html`). Dokud je seznam prázdný, sekce i odkazy na ni jsou skryté. Objeví se samy s prvním servisem, který souhlasí se zveřejněním.
+Sekce „Najít servis“ načítá živý seznam z ostré aplikace: `https://muj.vozopis.cz/autoservisy.json` (konstanta `DIR_URL` v `index.html`). Dokud je seznam prázdný, sekce i odkazy na ni jsou skryté. Objeví se samy s prvním servisem, který souhlasí se zveřejněním.
 
 ## Podmínky a ochrana údajů
 
@@ -26,5 +26,5 @@ Sekce „Najít servis“ načítá živý seznam z ostré aplikace: `https://ap
 
 ## Kontaktní formulář
 
-Formulář v sekci Kontakt odesílá zprávy do ostré aplikace (`https://app.vozopis.cz/api/kontakt/`, atribut `data-endpoint`). Zprávy jsou v administraci aplikace, provozovatel dostane e-mail s odkazem (bez obsahu zprávy). Když odeslání selže, formulář nabídne e-mail.
+Formulář v sekci Kontakt odesílá zprávy do ostré aplikace (`https://muj.vozopis.cz/api/kontakt/`, atribut `data-endpoint`). Zprávy jsou v administraci aplikace, provozovatel dostane e-mail s odkazem (bez obsahu zprávy). Když odeslání selže, formulář nabídne e-mail.
 
