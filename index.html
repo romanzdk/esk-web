@@ -38,13 +38,13 @@
         "@id": "https://vozopis.cz/#organizace",
         "name": "Vozopis",
         "url": "https://vozopis.cz/",
-        "email": "romanzdk@gmail.com",
+        "email": "kontakt@vozopis.cz",
         "description": "Elektronická servisní kniha pro nezávislé autoservisy v Česku.",
         "areaServed": { "@type": "Country", "name": "Česko" },
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "zákaznická podpora",
-          "email": "romanzdk@gmail.com",
+          "email": "kontakt@vozopis.cz",
           "availableLanguage": ["cs"]
         }
       },
@@ -574,7 +574,7 @@
         <p>První měsíc máte Vozopis zdarma. Napište nám a ukážeme vám, jak to funguje. Zabere to 15 minut.</p>
         <p style="margin-top:.8rem">Nebo si Vozopis nejdřív <a href="https://demo.vozopis.cz/prihlaseni/" style="color:#fff">sami vyzkoušejte</a> – bez registrace, jedním klikem, zkušební zápisy se neukládají.</p>
       </div>
-      <a id="contact-mail" class="btn btn-primary" href="mailto:romanzdk@gmail.com?subject=Chci%20Vozopis%20do%20servisu"><svg aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
+      <a id="contact-mail" class="btn btn-primary" href="mailto:kontakt@vozopis.cz?subject=Chci%20Vozopis%20do%20servisu"><svg aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
       <form id="contact-form" class="contact-form" data-endpoint="https://muj.vozopis.cz/api/kontakt/" hidden>
         <input type="hidden" name="kind" value="dotaz"><input type="hidden" name="page" value="promo web">
         <div class="hp" aria-hidden="true"><label>Web <input name="web" tabindex="-1" autocomplete="off"></label></div>
@@ -594,7 +594,7 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Vozopis – životopis vašeho auta, elektronická servisní kniha. Všechna práva vyhrazena.<br>Provozovatel: Roman Žydyk, IČO 09680357, č.&nbsp;p. 380, 257&nbsp;24 Chocerady · <a href="mailto:romanzdk@gmail.com">romanzdk@gmail.com</a> · Tento web nepoužívá cookies.</span>
+    <span>© 2026 Vozopis – životopis vašeho auta, elektronická servisní kniha. Všechna práva vyhrazena.<br>Provozovatel: Roman Žydyk, IČO 09680357, č.&nbsp;p. 380, 257&nbsp;24 Chocerady · <a href="mailto:kontakt@vozopis.cz">kontakt@vozopis.cz</a> · Tento web nepoužívá cookies.</span>
     <nav aria-label="Odkazy v patičce">
       <a href="#servisy">Pro servisy</a>
       <a href="#majitele">Pro majitele</a>
@@ -684,7 +684,7 @@
       if (r.ok) { cf.reset(); status.textContent = "Díky! Zprávu jsme dostali a brzy se vám ozveme."; }
       else status.textContent = r.status === 429 ? "Příliš mnoho zpráv za hodinu. Zkuste to později." : "Zkontrolujte kontakt a zprávu.";
     } catch {
-      status.textContent = "Zprávu se nepodařilo odeslat. Napište nám prosím na romanzdk@gmail.com.";
+      status.textContent = "Zprávu se nepodařilo odeslat. Napište nám prosím na kontakt@vozopis.cz.";
     } finally { btn.disabled = false; }
   });
 </script>
