@@ -1,16 +1,18 @@
 # Vozopis – promo web
 
-Prezentační web služby **Vozopis – elektronická servisní kniha**. Jedna statická stránka bez build kroku, hostovaná na GitHub Pages na doméně <https://vozopis.cz> (soubor `CNAME`). DNS u Forpsi: A záznamy domény na 185.199.108.153, .109.153, .110.153, .111.153 a `www` jako CNAME na `romanzdk.github.io`. Stará doména eservisnikniha.cz přesměrovává na vozopis.cz přes repozitář `romanzdk/eservisnikniha-redirect`.
+Prezentační web služby **Vozopis – elektronická servisní kniha**. Statický web bez build kroku, hostovaná na GitHub Pages na doméně <https://vozopis.cz> (soubor `CNAME`). DNS u Forpsi: A záznamy domény na 185.199.108.153, .109.153, .110.153, .111.153 a `www` jako CNAME na `romanzdk.github.io`. Stará doména eservisnikniha.cz přesměrovává na vozopis.cz přes repozitář `romanzdk/eservisnikniha-redirect`.
 
-- `index.html` – celý obsah stránky
+- `index.html` – úvodní stránka
+- `pro-servisy.html`, `pro-majitele.html`, `pro-kupujici.html` – stránky pro jednotlivé skupiny návštěvníků
+- `podminky.html` a `ochrana-udaju.html` – právní stránky
+- `404.html` – stránka pro neexistující adresy (GitHub Pages ji použije sám)
 - `assets/style.css` – vzhled
 - `assets/fonts/` – Barlow a Barlow Condensed (stejné jako v aplikaci) hostované lokálně, takže se nic nenačítá od Googlu a web nepotřebuje cookie lištu
 - `assets/og.png` – náhled pro sdílení na sociálních sítích
+- `assets/favicon.svg` a `apple-touch-icon.png` – ikony
 - `robots.txt` a `sitemap.xml` – pro vyhledávače. Když přidáte novou stránku, doplňte ji do mapy a upravte `lastmod`
 
 Lokálně: otevřete `index.html` v prohlížeči.
-
-Před spuštěním doplňte skutečný kontaktní e-mail místo `esk@example.com` v `index.html`.
 
 ## Licence
 
