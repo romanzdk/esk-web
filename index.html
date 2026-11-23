@@ -193,7 +193,7 @@
         <a href="#najit-servis" class="needs-dir" hidden>Najít servis</a>
         <a href="#cenik">Ceník</a>
         <a href="#faq">Otázky</a>
-        <a href="https://app.vozopis.cz/prihlaseni/">Přihlásit</a>
+        <a href="https://muj.vozopis.cz/prihlaseni/">Přihlásit</a>
       </div>
       <a class="btn btn-primary" href="#kontakt">Chci Vozopis do servisu</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
@@ -214,7 +214,7 @@
         <a class="btn btn-primary" href="#servisy"><svg aria-hidden="true"><use href="#i-wrench"/></svg>Jsem servis</a>
         <a class="btn btn-ghost" href="#majitele"><svg aria-hidden="true"><use href="#i-car"/></svg>Mám auto</a>
         <a class="btn btn-ghost" href="https://demo.vozopis.cz/prihlaseni/"><svg aria-hidden="true"><use href="#i-gauge"/></svg>Vyzkoušet aplikaci</a>
-        <a class="btn btn-ghost" href="https://app.vozopis.cz/registrace/">Registrovat servis</a>
+        <a class="btn btn-ghost" href="https://muj.vozopis.cz/registrace/">Registrovat servis</a>
         <a class="btn btn-ghost needs-dir" href="#najit-servis" hidden><svg aria-hidden="true"><use href="#i-search"/></svg>Seznam servisů</a>
       </div>
       <p class="hero-owner"><b>Máte auto?</b> Kupujícímu ukážete servisní historii. U&nbsp;každého zápisu vidí, který servis ho pořídil. <a href="#majitele">Jak na to&nbsp;→</a></p>
@@ -373,7 +373,7 @@
       <p class="eyebrow">Pro majitele aut</p>
       <h2 id="own-title">Zvyšte hodnotu svého auta.</h2>
       <p class="lead">S&nbsp;Vozopisem kupujícímu ukážete servisní historii. U&nbsp;každého zápisu vidí, který servis ho pořídil, a stav kilometrů. Papírová knížka se může ztratit a razítko je snadné napodobit.</p>
-      <p style="display:flex;flex-wrap:wrap;gap:.6rem"><a class="btn btn-primary" href="https://app.vozopis.cz/historie/">Moje auto – historie</a><a class="btn btn-dark" href="https://demo.vozopis.cz/prihlaseni/">Vyzkoušet ukázku</a></p>
+      <p style="display:flex;flex-wrap:wrap;gap:.6rem"><a class="btn btn-primary" href="https://muj.vozopis.cz/historie/">Moje auto – historie</a><a class="btn btn-dark" href="https://demo.vozopis.cz/prihlaseni/">Vyzkoušet ukázku</a></p>
       <p><a href="pro-majitele.html">Vozopis pro majitele aut: shrnutí na jedné stránce</a></p>
       <ul class="ticks" role="list">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Zápisy zapojených servisů pohromadě u&nbsp;jednoho VIN</b><span>Olej u&nbsp;jednoho, pneu u&nbsp;druhého, i&nbsp;když jezdíte mimo značkový servis.</span></div></li>
@@ -435,7 +435,7 @@
       <p class="eyebrow">Pro kupující ojetin</p>
       <h2 id="buy-title">Kupujete ojetinu? Chtějte po prodávajícím Vozopis.</h2>
       <p class="lead">Zdarma uvidíte, kolik záznamů auto má, jaké práce se dělaly a jaké stavy kilometrů servisy zapsaly. Když zapsané hodnoty na sebe nenavazují, Vozopis to označí.</p>
-      <p style="display:flex;flex-wrap:wrap;gap:.6rem"><a class="btn btn-primary" href="https://app.vozopis.cz/overeni/">Ověřit vůz</a><a class="btn btn-ghost" href="https://demo.vozopis.cz/prihlaseni/">Vyzkoušet ukázku</a></p>
+      <p style="display:flex;flex-wrap:wrap;gap:.6rem"><a class="btn btn-primary" href="https://muj.vozopis.cz/overeni/">Ověřit vůz</a><a class="btn btn-ghost" href="https://demo.vozopis.cz/prihlaseni/">Vyzkoušet ukázku</a></p>
       <p><a href="pro-kupujici.html">Vozopis pro kupující: shrnutí na jedné stránce</a></p>
       <p>Prodávající vám pošle odkaz pro kupující nebo má za oknem kartu s&nbsp;QR kódem. Pokud ověření pro své auto zapnul, stačí vám i VIN a datum první registrace z&nbsp;malého techničáku (řádek B). Bez jeho souhlasu historii podle VIN neukážeme, chráníme tím soukromí majitele. Když zadáte i stav tachometru, porovnáme ho s&nbsp;posledním zápisem.</p>
       <p>Celou historii vám ukáže prodávající, pokud ji má: pošle vám odkaz pro kupující nebo má za oknem kartu s&nbsp;QR kódem. Když ho poslat nechce, je to také odpověď.</p>
@@ -588,7 +588,7 @@
         <p style="margin-top:.8rem">Nebo si Vozopis nejdřív <a href="https://demo.vozopis.cz/prihlaseni/" style="color:#fff">sami vyzkoušejte</a> – bez registrace, jedním klikem, zkušební zápisy se neukládají.</p>
       </div>
       <a id="contact-mail" class="btn btn-primary" href="mailto:romanzdk@gmail.com?subject=Chci%20Vozopis%20do%20servisu"><svg aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
-      <form id="contact-form" class="contact-form" data-endpoint="https://app.vozopis.cz/api/kontakt/" hidden>
+      <form id="contact-form" class="contact-form" data-endpoint="https://muj.vozopis.cz/api/kontakt/" hidden>
         <input type="hidden" name="kind" value="dotaz"><input type="hidden" name="page" value="promo web">
         <div class="hp" aria-hidden="true"><label>Web <input name="web" tabindex="-1" autocomplete="off"></label></div>
         <label>Jméno<input name="name" autocomplete="name"></label>
@@ -650,7 +650,7 @@
   calc();
 </script>
 <script>
-  const DIR_URL = "https://app.vozopis.cz/autoservisy.json";
+  const DIR_URL = "https://muj.vozopis.cz/autoservisy.json";
   const norm = s => (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, "");
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
   function renderDirectory(all) {
