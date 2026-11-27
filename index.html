@@ -686,7 +686,9 @@
     try {
       const r = await fetch(cf.dataset.endpoint, { method: "POST", body: new FormData(cf) });
       if (r.ok) { cf.reset(); status.textContent = "Díky! Zprávu jsme dostali a brzy se vám ozveme."; }
-      else status.textContent = r.status === 429 ? "Příliš mnoho zpráv za hodinu. Zkuste to později." : "Zkontrolujte kontakt a zprávu.";
+      else status.textContent = r.status === 429 ? "Příliš mnoho zpráv za hodinu. Zkuste to později."
+        : r.status >= 500 ? "Zprávu se nepodařilo odeslat. Napište nám prosím na kontakt@vozopis.cz."
+        : "Zkontrolujte kontakt a zprávu.";
     } catch {
       status.textContent = "Zprávu se nepodařilo odeslat. Napište nám prosím na kontakt@vozopis.cz.";
     } finally { btn.disabled = false; }

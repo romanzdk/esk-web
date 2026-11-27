@@ -25,7 +25,7 @@
   --text: #17191c;
   --muted: #5b636d;
   --amber: #e8590c;
-  --amber-dark: #c2410c;
+  --amber-dark: #b93a0a; /* #c2410c was 4.45:1 on the grey background, below WCAG AA */
   --amber-on-dark: #f97316;
   --amber-soft: #fff1e8;
   --ok: #1d7f47;

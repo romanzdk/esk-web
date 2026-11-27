@@ -10,6 +10,8 @@ Prezentační web služby **Vozopis – elektronická servisní kniha**. Statick
 - `assets/fonts/` – Barlow a Barlow Condensed (stejné jako v aplikaci) hostované lokálně, takže se nic nenačítá od Googlu a web nepotřebuje cookie lištu
 - `assets/og.png` – náhled pro sdílení na sociálních sítích
 - `assets/favicon.svg` a `apple-touch-icon.png` – ikony
+- `.github/workflows/uptime.yml` – kontrola dostupnosti každých 10 minut (vozopis.cz, `/healthz` ostré aplikace a dema)
+- Návštěvnost měří GoatCounter (skript z `gc.zgo.at` se SRI hashem, bez cookies) a každá stránka má CSP v `<meta>`. Při změně verze skriptu přepočítejte SRI hash ve všech stránkách.
 - `robots.txt` a `sitemap.xml` – pro vyhledávače. Když přidáte novou stránku, doplňte ji do mapy a upravte `lastmod`
 
 Lokálně: otevřete `index.html` v prohlížeči.
