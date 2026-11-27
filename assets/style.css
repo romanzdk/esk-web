@@ -109,6 +109,8 @@ p { margin: 0 0 1em; }
 .hero-owner { margin: -.4rem 0 1.6rem; color: #c3ccda; }
 .hero-owner b { color: #fff; }
 .hero-owner a { color: var(--amber-on-dark); white-space: nowrap; }
+/* WCAG 2.5.8: inline links need a 24px tall target */
+.hero-owner a, footer span a { display: inline-block; min-height: 24px; line-height: 24px; }
 .checks { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; color: #c3ccda; font-size: .95rem; }
 .checks li { display: flex; align-items: center; gap: .45em; }
 .checks svg { width: 18px; height: 18px; color: var(--amber); flex: none; }
